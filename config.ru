@@ -6,8 +6,20 @@ $root = ::File.dirname(__FILE__)
 
 class SinatraStaticServer < Sinatra::Base  
 
-  get(/.+/) do
+  get "/" do
     send_sinatra_file(request.path) {404}
+  end
+
+  get %r{/view/HomePage(.html)?} do
+    redirect "/"
+  end
+
+  get "*.html" do
+    send_sinatra_file(request.path) {404}
+  end
+
+  get "*" do
+    redirect request.path + ".html"
   end
 
   not_found do
