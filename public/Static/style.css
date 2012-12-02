@@ -1,0 +1,545 @@
+/*
+Theme Name: Borderline Chaos
+Theme URI: http://theloo.org/2005/03/06/borderline-chaos/
+Description: A left nav fluid theme for <a href="http://wordpress.org/">Wordpress 1.5</a>
+Version: 1.9
+Author: <a href="http://theloo.org/about/">Marianne</a>
+Author URI: http://theloo.org/
+
+License: <A HREF="http://www.gnu.org/copyleft/lesser.html">GNU Lesser General Public License</A>
+
+Please visit the <A HREF="http://theloo.org/2005/03/06/borderline-chaos/">Theme Homepage</A> for the changelog and latest version!
+
+Thanks to <a href="http://www.thoughtmechanics.com/">Theron Parlin</a>, whose theme "Benevolence" provided the base files, and to <A HREF="http://wordpress.org/support/">Wordpress Support</a> members <a href="http://www.sekhu.net/">Jinsan</A> and <A HREF="http://moltenwords.net/">oriecat</A> for support and encouragement. Please see the README.html file for the changelog.
+
+Installation: place the folder named "BorderlineChaos" into your Wordpress 1.5 wp-content/themes/ directory and activated in your Wordpress Control panel under the Presentation tab. 
+
+Customization: If you'd like to change the color scheme, please find a Photoshop Document called "bkg.psd" in the images folder and modify it to fit your needs, saving it as bkg.jpg. Also, the main color definitions are listed at the top of the CSS. I've used <a href="http://www.somacon.com/color/colorchart.html">this color chart</a> as a reference.
+
+Please feel free to contact me through the <A HREF="http://theloo.org/2005/03/06/borderline-chaos/">theme homepage/a> if you have any questions.
+
+
+"I am an old woman named after my mother
+My old man is another child that?s grown old
+If dreams were lightning thunder was desire
+This old house would have burnt down a long time ago"
+*/
+
+
+body {
+	background-image: url(../attachment/bkg.jpg); 
+	background-repeat: repeat-y; 
+	background-position: left;
+	background-color: #333366;
+  	font-family: Verdana, Arial;
+	font-size: 8pt;
+	margin: 0;
+	padding: 0;
+}
+
+#masthead { 
+	background-image: url(style.css); 
+	position: relative;
+	top: 20px;
+	background-color: #458B00;
+	border-top: 7px solid black;
+	border-bottom: 7px solid black;
+ 	width: 100%;
+ 	height: 45px;
+	margin: 0px;
+	margin-top: 0px;
+}
+
+#blogtitle {
+	position: relative;
+	width: 22%;
+	top: 30px;
+	left: 20px;
+	color: #000;
+	font-variant: small-caps;
+	font-weight: bold;
+	margin-left: 2px;
+	background-color: #D6D6D6; 
+	text-align: left;
+	border: 7px solid black;
+	padding: 10px 10px 10px 10px;
+    	font-family: Verdana, Arial;
+	font-size: 17.5pt;
+	}
+
+#blogtitle a {
+	color: #8B1C62;
+}
+
+#blogtitle a:visited {
+	color: #8B1C62;
+}
+
+#blogtitle a:hover {
+	color: #8B1C62;
+border: 0px;
+}
+
+#sidebox {
+	width: 70%;
+	margin-left: 2px;
+	background-color: #CD9B1D;
+	text-align: left;
+	border: 7px solid black;
+	padding: 10px 10px 10px 10px;
+}
+
+#sidebox1 {
+	width: 70%;
+	margin-left: 2px;
+	background-color: #CD5555; 
+	text-align: left;
+	border: 7px solid black;
+	padding: 10px 10px 10px 10px;
+}
+
+#sidebox2 {
+	width: 70%;
+	margin-left: 2px;
+	background-color: #104E8B;
+	text-align: left;
+	border: 7px solid black;
+	padding: 10px 10px 10px 10px;
+}
+
+
+#sidebox3 {
+	width: 70%;
+	margin-left: 2px;
+	background-color: #9A32CD;
+	text-align: left;
+	border: 7px solid black;
+	padding: 10px 10px 10px 10px;
+}
+
+#sidebox4 {
+	width: 70%;
+	margin-left: 2px;
+	background-color: #CD9B1D;
+	text-align: left;
+	border: 7px solid black;
+	padding: 10px 10px 10px 10px;
+}
+
+#sidebox5 {
+	width: 70%;
+	margin-left: 2px;
+	background-color: #CD5555;
+	text-align: left;
+	border: 7px solid black;
+	padding: 10px 10px 10px 10px;
+max-width: 120px;
+}
+
+
+#sidebox6, #adbox {
+	width: 70%;
+	margin-left: 2px;
+	background-color: #104E8B;  
+	text-align: left;
+	border: 7px solid black;
+	padding: 10px 10px 10px 10px;
+}
+
+a {
+	color: #8C1C64;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #8C1C64;
+	text-decoration: none;
+}
+
+a:hover {
+
+	color: #8B1C62;
+	text-decoration: none;
+	border-bottom: 1px solid #394651;
+}
+
+#content {	
+	background-color: #ffffff;
+	border: 7px solid black;
+	margin-left: 220px;
+	text-align: left;
+}
+
+#contentwrapper {	
+	margin-top: 55px;
+}
+
+#sidebar {position: relative;
+	float: left;
+	width: 170px;
+	left: 40px;
+	margin-top: 76px;
+	text-align: left;
+    	font-family: Verdana, Arial;
+	color: #000;
+	font-size: 7.5pt;
+	line-height: 11pt;
+	text-transform: uppercase;
+} 
+
+#sidebar a {
+	color: #000;
+}
+
+#sidebar a:visited {
+	color: #000;
+}
+
+#sidebar a:hover {
+	color: #CD9B1D;
+}
+
+#sidebox a {
+	color: #000;
+}
+
+#sidebox a:visited {
+	color: #000;
+}
+
+#sidebox a:hover {
+	color: #8B1C62;
+}
+
+.blockquote { position: relative;
+	margin-bottom: 10px;
+	background-color: #D6D6D6; 
+	text-align: left; 
+	border: 2px solid #000000; 
+	padding: 5px;
+}
+
+.postmetadata { position: absolute;
+	top: 152px;
+	right: 8px;
+	background-color: #D6D6D6; 
+	text-align: left;
+     width: 34em;
+	border: 3px solid black;
+	padding: 8px;
+}
+
+#wrapper {
+	position: relative;
+	height: 100%;
+	margin: 0 auto;
+} 
+
+#insideWrapper {
+	top: 40px;
+	height: 100%;
+	margin: 0px;
+	text-align: left;
+	padding: 20px;
+}
+
+#insideWrapper:after{
+	content: "."; 
+	display: block; 
+	line-height: 1px; 
+	font-size: 1px; 
+	clear: both;}
+
+.post {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	margin: 10px 10px 10px 20px;
+	text-align: left;
+}
+
+.singlepost {
+	position: relative;
+	top: 48px;
+	left: 0px;
+	margin: 10px 10px 10px 20px;
+	text-align: left;
+}
+
+#footer {font-size: 7pt;
+	position: relative;
+	color: #fff;
+	text-align: right;
+	padding: 20px;
+}
+
+#footer a {
+	color: #fff;
+}
+
+#footer a:visited {
+	color: #fff;
+
+}
+
+#footer a:hover {
+	color: #ff3333;
+	border: 0px;
+}
+
+
+.footerLink {
+	color: #666;
+	text-decoration: underline;
+}
+
+a.footerLink {
+	color: #666;
+	text-decoration: underline;
+}
+
+.entrytext { 
+	padding-left: 10px; 
+	padding-right: 10px;
+	padding-top: 30px; 
+	max-width: 80%;
+}
+
+a.footerLink:visited {
+	color: #666;
+	text-decoration: underline;
+}
+
+a.footerLink:hover {
+	color: #999;
+	text-decoration: underline;
+}
+
+.title {
+    	font-family: Verdana, Arial;
+	color: #000000;
+	font-size: 9pt;
+	font-variant: small-caps;
+	font-weight: bold;
+}
+
+
+a.title {
+	color: #000000;
+}
+
+a.title:visited {
+	color: #000000;
+}
+
+a.title:hover {
+	color: #000000;
+	border: 0px;
+}
+
+.posttitle {
+
+    	font-family: Verdana, Arial;
+	color: #333;
+	font-size: 12.9pt;
+	font-variant: small-caps;
+	font-weight: bold;
+	border-bottom: 1px solid #999;
+	border-right: 1px solid #999;
+	padding-right: 3px;
+}
+
+a.posttitle {
+	color: #000000;
+	text-decoration: underline;
+}
+
+a.posttitle:visited {
+	color: #000000;
+	text-decoration: underline;
+}
+
+a.posttitle:hover {
+	color: #8B1C62;
+	border: 0px;
+	text-decoration: underline;
+}
+
+h2 {
+	color: #000000;
+	font-size: 14px;
+	text-align: left;
+}
+
+/*
+ul {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	padding-left: 0px;
+	list-style-type: none;
+	display: block;
+}
+
+
+li {
+	list-style-type: none;
+	display: block;
+	margin-left: 0px;
+}
+
+li li {
+	list-style-type: none;
+	display: block;
+	margin-left: 0px;
+}
+*/
+
+/*
+"Make me an angel that flies from montgom'ry
+Make me a poster of an old rodeo
+Just give me one thing that I can hold on to
+To believe in this living is just a hard way to go"
+*/
+
+.navigation { 
+	padding: 15px;
+}
+
+.left {
+	float: left;
+	margin: 0px 5px 0px 10px;
+}
+
+.right {
+	float: right;
+	margin: 0px 5px 0px 10px;
+}
+
+img {position: relative;}
+
+a img {
+	border: none;
+	}
+
+.centeredImage {
+    text-align:center;
+    margin-top:10px;
+    margin-bottom:0px;
+    padding:0px;
+}
+
+
+/*
+"When I was a young girl well, I had me a cowboy
+He weren't much to look at, just free rambling man
+But that was a long time and no matter how I try
+The years just flow by like a broken down dam."
+*/
+
+.cite {
+	font-size: 7pt;
+	color:#000000;
+}
+
+code {
+	font-family: Courier New, Verdana;
+	text-align:left;
+	color:#000000;
+	font-size: 8pt;
+}
+
+input {
+	border: 1px solid #333333;
+	background-color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #000000;
+	padding: 0px;
+}
+
+
+/*
+"Make me an angel that flies from montgom'ry
+Make me a poster of an old rodeo
+Just give me one thing that I can hold on to
+To believe in this living is just a hard way to go"
+*/
+
+
+.comments { 
+	padding: 20px;
+	margin-top: 20px;
+}
+
+.commentBox {
+	position: relative;
+	margin: 0 auto;
+	background-color: #f5f5f5; 
+	text-align: left; 
+	border: 1px solid #000000; 
+	padding: 5px;
+}
+
+.commentPos {
+	font-family: 'Verdana';
+	font-size: 8pt;
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	text-align: right;
+	font-variant: small-caps;
+}
+
+a.commentPos {
+	font-family: 'Verdana';
+	color: #ff3333;
+}
+
+a.commentPos:visited {
+	color: #ff3333;
+}
+
+a.commentPos:hover {
+	color: #000;
+	border: 0px;
+}
+
+/*
+"There's flies in the kitchen I can hear 'em there buzzing
+And I ain't done nothing since I woke up today.
+How the hell can a person go to work in the morning
+And come home in the evening and have nothing to say."
+*/
+.widecolumn { 
+	padding-top: 
+	20px; padding-left: 20px; 
+	padding-right: 20px; 
+	padding-bottom: 20px;
+}
+
+.narrowcolumn { 	
+	padding-top: 20px; 
+	padding-left: 60px; 
+	padding-right: 60px; 
+	padding-bottom: 20px;
+}
+
+.clear {
+    clear:both;
+    height:1px;
+    overflow:hidden;
+  }
+
+.center {
+	text-align: center;
+	}
+
+/*
+
+"Make me an angel that flies from montgom'ry
+Make me a poster of an old rodeo
+Just give me one thing that I can hold on to
+To believe in this living is just a hard way to go"
+~ John Prine
+*/
