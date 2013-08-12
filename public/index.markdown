@@ -13,5 +13,12 @@ Perhaps you are looking for information about my:
 
 If this list doesn’t cover what you want then feel free to contact me at <tom@counsell.org>.
 
+Recent changes:
+
+1.  Finished reading [Thinking in Time: The Uses of History for Decision-Makers
+by Richard E. Neustadt, Ernest R. May](/books/thinking-in-time.html)
+2.  Working on a [tangle](http://worrydream.com/Tangle/) for [exploring when nuclear-powered-electricity might be cheaper than gas-powered-electricity](http://tamc.github.io/tamc-tangles/whenwillitbecheaperthangas.html)
+
+
 [decc]: https://www.gov.uk/government/organisations/department-of-energy-climate-change
 [gnb]: http://www.greenonblack.com 
