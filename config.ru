@@ -22,7 +22,7 @@ class SinatraStaticServer < Sinatra::Base
     send_sinatra_file(request.path) {404}
   end
 
-  get "*" do
+  get "/view/*" do
     redirect request.path + ".html"
   end
 
