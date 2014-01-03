@@ -16,7 +16,6 @@ If this list doesn’t cover what you want then feel free to contact me at <tom@
 News
 ----
 
-1.  I have updated the [list of programs](/programming) that I have written.
 1.  With my team's help, Taiwan have [launched their version of a 2050 calculator](http://my2050.twenergy.org.tw). It looks awesome. Ewan Bennie went to the launch and [blogged about it](http://blog.decc.gov.uk/2013/12/03/made-in-taiwan/).
 1.  I am quite proud of the legends on the [new charts in the 2050 calculator](http://2050-calculator-tool.decc.gov.uk). Did them in [D3](http://d3js.org) which was a pleasure. [See the code](https://github.com/decc/twenty-fifty/blob/master/src/javascripts/stacked_area_chart.js.coffee).
 1.  Finished reading [Thinking in Time: The Uses of History for Decision-Makers

@@ -1,5 +1,4 @@
 % Programming
-% Updated 3 January 2013
 
 Back to the [home page](/)
 
@@ -43,3 +42,5 @@ My history as a programmer
 --------------------------
 
 My mum taught me to program when I was aged 8 or so, in [BBC Basic](http://www.bbcbasic.org) on (you guessed it) a [beeb](http://en.wikipedia.org/wiki/BBC_Microcomputer), I then graduated onto programming in Assembler and some Pascal on the BBC and on my [arc](http://en.wikipedia.org/wiki/Acorn_Archimedes). During my university years I worked for a few start-ups doing some coding in Java including a web-server that customised content to the person viewing it in the days when that was pretty novel and high tech, and some work on electronic health records.  I didn’t do any programming while I was working as a [Strategy Consultant](http://www.marakon.com), but re-learnt when I went back to University for my [PhD](Phd.html). My default language is [ruby](Ruby.html). 
+
+Updated 3 January 2014
