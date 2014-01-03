@@ -9,7 +9,7 @@ Perhaps you are looking for information about my:
 
 1.  [History](view/History.html)
 2.  [PhD](view/Phd.html)
-6.  [Programming](/programming)
+6.  [Programming](/programming/)
 
 If this list doesn’t cover what you want then feel free to contact me at <tom@counsell.org>.
 
