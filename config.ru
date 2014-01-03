@@ -14,6 +14,10 @@ class SinatraStaticServer < Sinatra::Base
     redirect "/"
   end
 
+  get %r{/view/Programming(.html)?} do
+    redirect "/programming/"
+  end
+
   get "*.html" do
     send_sinatra_file(request.path) {404}
   end
