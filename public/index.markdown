@@ -16,8 +16,10 @@ If this list doesn’t cover what you want then feel free to contact me at <tom@
 News
 ----
 
+1.  My team won a second [Civil Service Award](http://my.civilservice.gov.uk/reform/civil-service-awards-2013/) for Analysis and Use of Evidence, joint with the Foreign Office. Well done guys.
 1.  With my team's help, Taiwan have [launched their version of a 2050 calculator](http://my2050.twenergy.org.tw). It looks awesome. Ewan Bennie went to the launch and [blogged about it](http://blog.decc.gov.uk/2013/12/03/made-in-taiwan/).
 1.  I am quite proud of the legends on the [new charts in the 2050 calculator](http://2050-calculator-tool.decc.gov.uk). Did them in [D3](http://d3js.org) which was a pleasure. [See the code](https://github.com/decc/twenty-fifty/blob/master/src/javascripts/stacked_area_chart.js.coffee).
+1.  My team has started to develop a 2050 calculator [for the world](http://globalcalculator.org/), watch the [video message's about the project](http://www.youtube.com/playlist?list=PLar0SlGyNQ8tFLdWYMnVUvRWbeIAXVIRY).
 1.  Finished reading [Thinking in Time: The Uses of History for Decision-Makers
 by Richard E. Neustadt, Ernest R. May](/books/thinking-in-time.html)
 2.  I have been working on a [tangle](http://worrydream.com/Tangle/) for [exploring when nuclear-powered-electricity might be cheaper than gas-powered-electricity](http://tamc.github.io/tamc-tangles/whenwillitbecheaperthangas.html)
