@@ -10,6 +10,7 @@ Live projects
 -   [excel_to_code](http://github.com/tamc/excel_to_code) - compiles Excel spreadsheets into pure C or pure Ruby code, so that they can server as the backend to visualisations, or be driven programatically.
 -   [Sankey](http://github.com/tamc/Sankey) - A javascript library for drawing [Sankey](http://en.wikipedia.org/wiki/Sankey_diagram) diagrams. 
 -   [rubypeg](http://github.com/tamc/rubypeg) - A ruby library for constructing [parsing expression grammars](http://en.wikipedia.org/wiki/Parsing_expression_grammar)
+-   [how-much-is](http://tamc.github.io/how-much-is/) - A single page web application for doing unit conversions and simultaneously giving a sense of whether the number is big or not
 
 Dead or passed on
 -----------------
