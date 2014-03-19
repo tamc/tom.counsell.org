@@ -16,6 +16,8 @@ If this list doesn’t cover what you want then feel free to contact me at <tom@
 News
 ----
 
+1.  I've updated my units calculator to be a [single page web app](http://tamc.github.io/how-much-is)
+1.  With my team's help, India have [launched their version of a 2050 calculator](http://indiaenergy.gov.in). They have done a great job with their documentation. I blogged about it at [DECC](http://blog.decc.gov.uk/2014/03/04/not-how-they-do-it-on-yes-minister/)
 1.  My team won a second [Civil Service Award](http://my.civilservice.gov.uk/reform/civil-service-awards-2013/) for Analysis and Use of Evidence, joint with the Foreign Office. Well done guys.
 1.  With my team's help, Taiwan have [launched their version of a 2050 calculator](http://my2050.twenergy.org.tw). It looks awesome. Ewan Bennie went to the launch and [blogged about it](http://blog.decc.gov.uk/2013/12/03/made-in-taiwan/).
 1.  I am quite proud of the legends on the [new charts in the 2050 calculator](http://2050-calculator-tool.decc.gov.uk). Did them in [D3](http://d3js.org) which was a pleasure. [See the code](https://github.com/decc/twenty-fifty/blob/master/src/javascripts/stacked_area_chart.js.coffee).
