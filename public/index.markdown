@@ -16,6 +16,7 @@ If this list doesn’t cover what you want then feel free to contact me at <tom@
 News
 ----
 
+1.  A bit of fun for my daughter's birthday party&mdash;[How loud does a dinosaur roar?](/programming/how-loud-does-a-dinosaur-roar) (only works in [Chrome](http://chrome.google.com) browsers)
 1.  I've updated my units calculator to be a [single page web app](http://tamc.github.io/how-much-is)
 1.  With my team's help, India have [launched their version of a 2050 calculator](http://indiaenergy.gov.in). They have done a great job with their documentation. I blogged about it at [DECC](http://blog.decc.gov.uk/2014/03/04/not-how-they-do-it-on-yes-minister/)
 1.  My team won a second [Civil Service Award](http://my.civilservice.gov.uk/reform/civil-service-awards-2013/) for Analysis and Use of Evidence, joint with the Foreign Office. Well done guys.

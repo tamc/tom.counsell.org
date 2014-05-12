@@ -1,0 +1,6 @@
+# Logfile created on 2014-01-03 22:08:45 +0000 by logger.rb/44203
+I, [2014-01-03T22:08:45.585839 #9777]  INFO -- : 0:  rack (1.4.1) from /usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/specifications/rack-1.4.1.gemspec
+I, [2014-01-03T22:08:46.303921 #9777]  INFO -- : 0:  rack-protection (1.2.0) from /usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/specifications/rack-protection-1.2.0.gemspec
+I, [2014-01-03T22:08:46.785253 #9777]  INFO -- : 0:  tilt (1.3.3) from /usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/specifications/tilt-1.3.3.gemspec
+I, [2014-01-03T22:08:47.447116 #9777]  INFO -- : 0:  sinatra (1.3.3) from /usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/specifications/sinatra-1.3.3.gemspec
+I, [2014-01-03T22:08:47.447704 #9777]  INFO -- : 0:  bundler (1.5.0) from /usr/local/Cellar/ruby/2.1.0/lib/ruby/gems/2.1.0/specifications/bundler-1.5.0.gemspec
