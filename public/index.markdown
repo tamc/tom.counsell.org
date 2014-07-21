@@ -16,6 +16,7 @@ If this list doesn’t cover what you want then feel free to contact me at <tom@
 News
 ----
 
+1.  My team have released a draft [Global Calculator](http://www.globalcalculator.org) that allows you to try out different standards of living and the energy system that supports them, and then see the consequences for climate change and fossil fuel reserves. We are looking for expert feedback on the draft, so we can make it awesome in time for a December release. I [blogged about it at DECC](http://blog.decc.gov.uk/2014/07/21/poke-it-prod-it-break-it-help-us-to-make-a-great-global-calculator/).
 1.  A bit of fun for my daughter's birthday party&mdash;[How loud does a dinosaur roar?](/programming/how-loud-does-a-dinosaur-roar) (only works in [Chrome](http://chrome.google.com) browsers)
 1.  I've updated my units calculator to be a [single page web app](http://tamc.github.io/how-much-is)
 1.  With my team's help, India have [launched their version of a 2050 calculator](http://indiaenergy.gov.in). They have done a great job with their documentation. I blogged about it at [DECC](http://blog.decc.gov.uk/2014/03/04/not-how-they-do-it-on-yes-minister/)
