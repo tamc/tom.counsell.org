@@ -3,7 +3,9 @@
 ![](tomcounsell.jpg)
 
 Hello. I'm an engineer. At the moment I run part of [the Department
-of Energy and Climate Change][decc]'s strategy team. I also do occasional freelance work through [Green on Black Ltd][gnb].
+of Energy and Climate Change][decc]'s strategy team. I also do occasional freelance work through [Green on Black Ltd][gnb]. 
+
+Here are some [words to describe me](/bio.html) for use in seminar programmes, posters about talks I am giving etc.
 
 Perhaps you are looking for information about my:
 
