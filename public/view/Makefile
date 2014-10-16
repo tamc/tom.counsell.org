@@ -1,7 +1,7 @@
-all: thinking-in-time.html
+all: history.html
 
-thinking-in-time.html: thinking-in-time.markdown
-	pandoc -s -t html5 -c '/index.css' thinking-in-time.markdown -o thinking-in-time.html
+history.html: history.markdown
+	pandoc -s -t html5 -c '/index.css' history.markdown -o history.html
 
 clean:
-	rm thinking-in-time.html
+	rm history.html

@@ -45,5 +45,8 @@
 12. Seconded to [the Department for Energy and Climate Change](http://www.decc.gov.uk) ...
     -   where I assist the department’s chief scientist—[Professor David MacKay](http://www.inference.phy.cam.ac.uk/mackay/) ...
     -   ... in particular, with developing the [DECC 2050 Pathways](http://www.decc.gov.uk/en/content/cms/what_we_do/lc_uk/2050/2050.aspx)
-13. Created DECC's new engineering team
-15. Took over DECC's Futures team, part of the Strategy Directorate
+13. Became a permanent civil servant in the department and:
+    - Created the new engineering team
+    - then took over DECC's Futures team, part of the Strategy Directorate
+    - then took my whole team to the International Climate Change directorate, to help other countries replicate what we did
+    - whilst in the International Directorate, I also looked after the forests, private finance and international climate finance team when their manager moved on.
