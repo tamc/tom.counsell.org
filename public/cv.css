@@ -4,6 +4,7 @@ body {
 }
 
 #content {
+  width: 100%;
   margin: 1em auto;  
   max-width: 50em;
 }
