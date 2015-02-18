@@ -18,6 +18,9 @@ If this list doesn’t cover what you want then feel free to contact me at <tom@
 News
 ----
 
+1.  Together with [ITRI](https://www.itri.org.tw) we hosted a conference in Taipei for [all the countries](http://www.2050.org.uk/#!calculators/cee5) that are working on 2050 calculators. [Premier Mao](http://en.wikipedia.org/wiki/Mao_Chi-kuo) opened the event, and an awesome group of high school children put on a play about the difficulty of agreeing what to do about energy in Taiwan.
+1.  We're writing a [book on how to make a 2050 calculator](http://book.2050.org.uk).
+1.  Some great responses to the launch of our [Global Calculator](http://www.globalcalculator.org). One of my favourites is the headline of the article in the Telegraph: "[Hate wind farms? Eat chicken, not beef](http://www.telegraph.co.uk/news/earth/environment/climatechange/11373389/Hate-wind-farms-Eat-chicken.html)."
 1.  Created an [automatic marginal abatement cost curve generator](http://alt-glob-calc.dev/macc/) for the [Global Calculator](http://www.globalcalculator.org).
 1.  Produced a [Cates plot for statins showing side effects](http://bl.ocks.org/tamc/raw/024168df8660eeca26aa/) for my wife's blog post.
 1.  My team have released a draft [Global Calculator](http://www.globalcalculator.org) that allows you to try out different standards of living and the energy system that supports them, and then see the consequences for climate change and fossil fuel reserves. We are looking for expert feedback on the draft, so we can make it awesome in time for a December release. I [blogged about it at DECC](http://blog.decc.gov.uk/2014/07/21/poke-it-prod-it-break-it-help-us-to-make-a-great-global-calculator/).
