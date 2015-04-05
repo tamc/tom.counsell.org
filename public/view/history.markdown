@@ -50,3 +50,4 @@
     - then took over DECC's Futures team, part of the Strategy Directorate
     - then took my whole team to the International Climate Change directorate, to help other countries replicate what we did
     - whilst in the International Directorate, I also looked after the forests, private finance and international climate finance team when their manager moved on.
+    - then moved to the newly expanded Analysis Directorate, working for the Chief Economist
