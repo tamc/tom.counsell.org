@@ -1,0 +1,230 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>CV Thomas Counsell April 2015 - Coding</title>
+  <style>
+    body {
+      font-size: 1em;
+      font-family: "Franklin Gothic Book"
+    }
+
+    #content {
+      width: 100%;
+      margin: 1em auto;  
+      max-width: 41em;
+    }
+
+    h1, #contact {
+      width: 100%;
+      text-align: center;
+    }
+
+    #contact {
+      margin-bottom: 2em;
+    }
+
+    h1 {
+      margin-bottom: 0;
+    }
+
+    h1, h2 {
+      color: #b00;
+      font-family: "Big Caslon";
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      margin-bottom: 0.5em;
+    }
+
+    p, ol, ul {
+      margin-top: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding:0;
+      margin:0;
+    }
+
+    li { 
+      position: relative;
+    }
+
+    li:before {
+      content: "★ ";
+      position: absolute;
+      left: -1.5em;
+      top: 0.5em;
+      font-size: 0.5em;
+      color: #b00;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a.image {
+      display: block;
+      float: right;
+      margin-left: 2em;
+      border: solid 1px #b00;
+    }
+
+    section:after { 
+     content: "";
+     display: block; 
+     clear: both;
+    }
+      </style>
+</head>
+<body>
+<h1>Dr Thomas Counsell</h1> 
+<p id='contact'>65 Coventry Street, BN1 5PP &mdash; <a href='mailto:tom@counsell.org'>tom@counsell.org</a> &mdash; 07976 360 423</p>
+
+<div id='content'>
+    <p>This variant of my cv highlights my software experience. I also have <a href='cv.html'>variant</a> that does not.</p>
+
+  <h2>Education</h2>
+
+  <table>
+    <tr><td>2003&ndash;2007</td><td>University of Cambridge &mdash; PhD Engineering.</td></tr>
+    <tr><td>1996&ndash;2000</td><td>University of Cambridge &mdash; BA MEng Engineering, 1st class.</td></tr>
+    <tr><td>1990&ndash;1995</td><td>Millfield School, Somerset, UK &mdash; Scholarship, 10 GCSES &amp; 4&half; A-levels at grade A.</td></tr>
+  </table>
+
+  <h2>Experience with technologies</h2>
+
+  <section>
+    <h3>Languages</h3>
+    <ul>
+      <li><a href='http://www.ruby-lang.org'>Ruby</a> &mdash; I've used this for substantial projects since 2003. I program in a test-driven style. </li>
+      <li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'>Javascript</a>, <a href='https://developer.mozilla.org/en-US/docs/Web/HTML'>html</a> &amp; <a href='https://developer.mozilla.org/en-US/docs/Web/CSS'>css</a> &mdash; I've produced both single page and server backed web applications.</li>
+      <li><a href='http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf'>C</a> &mdash; I've written small pieces of code that required high performance and interfaced them with Ruby.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Libraries</h3>
+
+    <ul>
+      <li><a href='http://d3js.org'>d3.js</a> &mdash; I've used this since 2011 to produce complex interactive charts.</li>
+      <li><a href='http://www.sinatrarb.com'>Sinatra</a> and (older versions of) <a href='http://rubyonrails.org'>Rails</a> &mdash; I've produced moderately complex production web apps.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Tools & Applications</h3>
+
+    <ul>
+      <li><a href='http://git-scm.com'>git</a> &amp; <a href='http://github.com'>github</a> &mdash; I use them every day to manage the code I write.</li>
+      <li><a href='http://aws.amazon.com'>AWS</a> &mdash; I have set up and maintained Ubuntu servers and used images, auto-scaling, load balancers, S3, CloudFront and Route 53.</li>
+      <li><a href='http://www.postgresql.org'>postgres</a> &mdash; I have designed, set up and queryed simple databases and used them in low-volume production.</li>
+      <li><a href='http://www.ecma-international.org/publications/standards/Ecma-376.htm'>Excel</a> &mdash; not just how to use it effecively, but also how it file format works and how to interface it with other systems.</li>
+      <li><a href='http://www.vim.org'>VIM</a> &mdash; I use it every day.</li>
+    </ul>
+  </section>
+
+  <h2>Projects delivered</h2>
+
+  <section>
+    <h3>The 2050 Calculator</h3>
+    <a class='image' href='http://2050-calculator-tool.decc.gov.uk'><img src='/static/2050.png' /></a>
+
+    <p>An <a href='http://2050-calculator-tool.decc.gov.uk'>online tool</a> that allows people to explore the future of the UK's energy system and has been in continuous operation since 2010. I wrote all the code, mostly in Ruby and Javascript with some C. Key features:</p>
+    <ul>
+      <li><a href='http://github.com/tamc/excel_to_code'>Code</a> that takes an Excel spreadsheet and translates it into an equivalent model written in C.</li>
+      <li><a href='http://github.com/decc/twenty-fifty'>Code</a> to interface between the C library and the javascript in the browser</li>
+      <li>Bespoke javascript <a href='http://2050-calculator-tool.decc.gov.uk'>controls and charts</a>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>New Media Knowledge</h3>
+    <a class='image' href='/static/nmk.png'><img src='/static/nmk-small.png' /></a>
+
+    <p>A bespoke content management written for the New Media Knowledge organisation in operation 2007-2014. 90% of the code was written by me, using Ruby on Rails. The final styling was done by a design firm. It involved:</p>
+    <ul>
+      <li>User management, blog posts and event listings.</li>
+      <li>A mailing list system, including archives.</li>
+      <li>A ticketing system, including payment system integration.</li>
+      <li>It was written in Ruby on Rails, backed by MySql.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Talks.cam</h3>
+    <a class='image' href='http://talks.cam.ac.uk'><img src='/static/talkscam.png' /></a>
+
+    <p>An <a href='http://talks.cam.ac.uk'>events listing</a> site written for the University of Cambridge. It has been in continuous use since 2006. I wrote the front and back-end code, using an early version of Ruby on Rails. It involved:</p>
+    <ul>
+      <li>User management, including interfacing to the early University of Cambridge Single Sign On system.</li>
+      <li>A clever but complex alternative to tagging (talks could appear on any number of lists. Lists could contain other lists.)</li>
+      <li>Providing content that could be embedded on other people's websites</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Ancient history</h3>
+    <a class='image' href='/static/soks.png'><img src='/static/soks-small.png' /></a>
+
+    <ul>
+      <li>In 2003 I developed one of the first wikis in the ruby langage (called SOKS) &mdash; written in pre-Rails ruby. Used for a while by (part of) NASA amongst others.</li>
+      <li>In 2000 I made an early attempt at Electronic Health Records for Cambridge Health Informatics (now defunct)  &mdash; Start-up. Developed system to query GP databases and summarise information for use in hosptials. Working in Java.</li>
+      <li>In 1998 I developed one of the early content management systems at Netcentric Solutions (now defunct) &mdash; Worked part-time for this Cambridge based start-up while completing my degree. Working in Java.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Little bits and pieces</h3>
+    <a class='image' href='http://tamc.github.io/flying-brick/'><img src='/static/flyingbrick.png' /></a>
+
+    <ul>
+      <li>Novel data driven visuatlisations in d3: e.g.,: a <a href='http://bl.ocks.org/tamc/raw/024168df8660eeca26aa/'>CATES plot</a>, a <a href=''>Marginal Abatement Cost Curve</a>, a '<a href='http://tamc.github.io/flying-brick/'>flying brick</a>' chart.</li>
+      <li>Script that watches for changes on a github repository, combines the files and uses pandoc to spit out the result as Word, PDF and HTML.</li>
+      <li>Scripts to drive the UK TIMES energy model (written in GAMS) and visualise the results</li>
+    </ul>
+  </section>
+
+  <h2>Wider experience</h2>
+
+  <h3>Working cultures</h3>
+
+  <p>I have worked as a civil servant, as a strategy consultant, in various engineering roles, as a university teaching assistant and for small start-ups. I have worked on projects in Singapore, Hong Kong, Canada, the USA, the Netherlands and Switzerland.</p>
+
+  <h3>Finances</h3>
+
+  <p> I have been routinely responsible for budget's of £1&thinsp;million or more. I can do a NPV valuation of a business or project and draw up a simple set of accounts.</p>
+
+  <h3>Project Management</h3>
+
+  <p>I know how to manage projects, from quick pieces of work with deadlines hours or days away to multi-year activities that involve many strands, many stakeholders, gantt charts, risk registers</p> 
+
+  <h3>Communication</h3>
+
+  <p>I have presented to groups of up to 700 people, on technical and non-technical subjects, to benign and to hostile questioning. I have written academic papers, public blog posts and many reports.</p>
+
+  <h3>Teams</h3>
+
+  <p>I have routinely managed teams of ten including technical specialists, economists and generalists at a range of levels.</p>
+
+  <h3>Teaching</h3>
+
+  <p>I have taught Maths, Materials and the control and organisation of Manufacturing systems at Unviersity level.</p>
+
+  <h2>Further detail</h2>
+
+  <ul>
+    <li><a href='http://github.com/tamc'>http://github.com/tamc</a> &mdash; Some of my open-source code.</li>
+    <li><a href='http://github.com/decc'>http://github.com/decc</a> &mdash; Some more of my open-source code.</li>
+    <li><a href='http://tom.counsell.org'>http://tom.counsell.org</a> &mdash; My personal website.</li>
+    <li><a href='http://uk.linkedin.com/pub/tom-counsell/0/441/360/'>http://uk.linkedin.com/pub/tom-counsell/0/441/360/</a> &mdash; My LinkedIn profile.</li>
+  </ul>
+</div>
+</body>
+</html>
