@@ -3,10 +3,53 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>CV Thomas Counsell April 2015 - Coding</title>
   <style>
+    /* Sort out the fonts and spacing first */
+    * { 
+      margin: 0; 
+      padding: 0;
+    }
+
     body {
       font-size: 1em;
       font-family: "Franklin Gothic Book";
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.46666em;
+      margin-top: 0.46666em;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 0.7em;
+      margin-top: 0.7em;
+    }
+
+    h3 {
+      font-size: 1em;
+      margin-bottom: 1.4em;
+      margin-top: 1.4em;
+    }
+
+    h1, h2, h3 {
       line-height: 1.4em;
+    }
+
+    p, ol, ul {
+      font-size: 1em;
+      margin-top: 1.4em;
+      margin-bottom: 1.4em;
+    }
+
+    /* Now the major elements of the layout */
+    h1, #contact {
+      width: 100%;
+      text-align: center;
+    }
+
+    #contact {
+      margin-top: -0.7em;
     }
 
     #content {
@@ -15,71 +58,20 @@
       max-width: 41em;
     }
 
-    h1, #contact {
-      width: 100%;
-      text-align: center;
+    /* Make sure the sections expand vertically to encompass the figures */
+
+    section:after { 
+     content: "";
+     display: block; 
+     clear: both;
     }
 
-    #contact {
-      margin-bottom: 2em;
-    }
-
-    h1 {
-      line-height: 3em;
-      margin-bottom: -1em;
-    }
-
-    h2 {
-      line-height: 2em;
-    }
-
+    /* Now the individual colours, decorations etc */
     h1, h2 {
       color: #b00;
       font-family: "Big Caslon";
       font-weight: normal;
       text-transform: uppercase;
-    }
-
-    h3 {
-      margin-bottom: 0.5em;
-    }
-
-    p, ol, ul {
-      margin-top: 0;
-    }
-
-    ul {
-      list-style: none;
-      padding:0;
-      margin:0;
-    }
-
-    li { 
-      position: relative;
-    }
-
-    li:before {
-      content: "★ ";
-      position: absolute;
-      left: -1.5em;
-      top: 0.1em;
-      font-size: 0.5em;
-      color: #b00;
-    }
-
-    .list {
-      position: relative;
-      margin-bottom: 0.7em;
-    }
-
-    .year {
-      position: absolute;
-      left: -15em;
-      width: 14em;
-      text-align: right;
-      top: 0.1em;
-      font-size: 0.5em;
-      color: #b00;
     }
 
     a {
@@ -90,41 +82,82 @@
       text-decoration: underline;
     }
 
-
-
-    /*
-    a.image {
-      display: block;
-      right: -240px;
-      position: absolute;
-      margin-left: 2em;
-      border: solid 1px #b00;
-    }
-    */
-
-    figure {
-      margin: 0px;
-      padding: 0;
-      position: absolute;
-      right: -240px;
-      border: solid 1px #b00;
-      text-align: center;
+    ul {
+      list-style: none;
+      padding-left:0;
+      margin-left:0;
     }
 
-    figcaption {
-      font-size: 0.5em;
-    }
-
-
-    section {
+    li { 
+      /* So the before element is positioned relative to the list element */
       position: relative;
     }
 
-    section:after { 
-     content: "";
-     display: block; 
-     clear: both;
+    li:before {
+      content: "★ ";
+      position: absolute;
+      left: -1.5em;
+      top: 0.5em;
+      font-size: 0.5em;
+      color: #b00;
     }
+
+    .list {
+      /* So that the .year elements are positioned relative to this element */
+      position: relative;
+    }
+
+    .year, .heading-year {
+      font-size: 0.5em;
+      color: #b00;
+      margin-top: 2.8em;
+    }
+
+    .heading-year {
+      /* Glue the year to the h2 heading below */
+      margin-bottom: -2.8em;
+    }
+
+    figcaption {
+      margin-left: 0.5em;
+      font-size: 0.5em;
+    }
+
+    /* Now some responsive parts */
+
+    /* If space, move the year into the left margin */
+    @media screen and (min-width: 800px) { 
+      .year, .heading-year {
+        position: absolute;
+        left: -15em;
+        width: 14em;
+        text-align: right;
+        top: 0.5em;
+        margin: 0;
+        padding: 0;
+      }
+      .heading-year {
+        top: 0.7em;
+      }
+    }
+    
+    /* If space, move the figures into the right margin */
+    @media screen and (min-width: 1200px) { 
+
+      section {
+        /* So that the figure absolute position is relative to the section */
+        position: relative;
+      }
+      figure {
+        margin: 0px;
+        padding: 0;
+        position: absolute;
+        right: -240px;
+        border: solid 1px #b00;
+      }
+    }
+
+
       </style>
 </head>
 <body>
@@ -178,7 +211,8 @@
   <h2>Projects delivered</h2>
 
   <section>
-    <div class='year'>2010&ndash;2015</div>
+
+    <div class='heading-year'>2010&ndash;2015</div>
     <h3>The 2050 Calculator</h3>
 
     <figure>
@@ -198,7 +232,7 @@
   </section>
 
   <section>
-    <div class='year'>2007&ndash;2014</div>
+    <div class='heading-year'>2007&ndash;2014</div>
     <h3>New Media Knowledge</h3>
 
     <figure>
@@ -218,7 +252,7 @@
   </section>
 
   <section>
-    <div class='year'>2006&ndash;2007</div>
+    <div class='heading-year'>2006&ndash;2007</div>
     <h3>Talks.cam</h3>
 
     <figure>
@@ -290,7 +324,7 @@
 
   <h3>Teaching</h3>
 
-  <p>I have taught Maths, Materials and the control and organisation of Manufacturing systems at Unviersity level.</p>
+  <p>I have taught maths, materials and the control and organisation of manufacturing systems at university level.</p>
 
   <h2>Further detail</h2>
 
