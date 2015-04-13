@@ -1,6 +1,9 @@
 <html>
 <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'> 
 	<title>CV Thomas Counsell April 2015 - Coding</title>
   <style>
     /* Sort out the fonts and spacing first */
@@ -11,7 +14,6 @@
 
     body {
       font-size: 1em;
-      font-family: "Franklin Gothic Book";
     }
 
     h1 {
@@ -55,7 +57,7 @@
     #content {
       width: 100%;
       margin: 1em auto;  
-      max-width: 41em;
+      max-width: 45em;
     }
 
     /* Make sure the sections expand vertically to encompass the figures */
@@ -67,9 +69,13 @@
     }
 
     /* Now the individual colours, decorations etc */
-    h1, h2 {
+    body {
+      font-family: "Merriweather", serid;
+    }
+
+    h1, h2, h3 {
+      font-family: "Lato", serif;
       color: #b00;
-      font-family: "Big Caslon";
       font-weight: normal;
       text-transform: uppercase;
     }
@@ -118,6 +124,10 @@
       margin-bottom: -2.8em;
     }
 
+    figure:hover {
+      border: solid 1px #000;
+    }
+
     figcaption {
       margin-left: 0.5em;
       font-size: 0.5em;
@@ -153,7 +163,7 @@
         padding: 0;
         position: absolute;
         right: -240px;
-        border: solid 1px #b00;
+        border: solid 1px rgba(255,0,0,0.1);
       }
     }
 
@@ -171,15 +181,15 @@
 
   <div class='list'><div class='year'>2003&ndash;2007</div>University of Cambridge &mdash; PhD Engineering.</div>
   <div class='list'><div class='year'>1996&ndash;2000</div>University of Cambridge &mdash; BA MEng Engineering, 1st class.</div>
-  <div class='list'><div class='year'>1990&ndash;1995</div>Millfield School, Somerset, UK &mdash; Scholarship, 10 GCSES &amp; 4&half; A-levels at grade A.</div>
+  <div class='list'><div class='year'>1990&ndash;1995</div>Millfield School &mdash; Scholarship, 10 GCSES &amp; 4&half; A-levels at grade A.</div>
 
-  <h2>Experience with technologies</h2>
+  <h2>Skills</h2>
 
   <section>
     <h3>Languages</h3>
     <ul>
       <li><a href='http://www.ruby-lang.org'>Ruby</a> &mdash; I've used this for substantial projects since 2003.</li>
-      <li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'>Javascript</a>, <a href='https://developer.mozilla.org/en-US/docs/Web/HTML'>html</a> &amp; <a href='https://developer.mozilla.org/en-US/docs/Web/CSS'>css</a> &mdash; I've produced both single-page and client-server web applications.</li>
+      <li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'>Javascript</a>, <a href='https://developer.mozilla.org/en-US/docs/Web/HTML'>html</a> &amp; <a href='https://developer.mozilla.org/en-US/docs/Web/CSS'>css</a> &mdash; Both single-page and client-server web applications.</li>
       <li><a href='http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf'>C</a> &mdash; I've written a few high performance routines and interfaced them with Ruby.</li>
       <li><a href=''>Objective-C</a>, <a href=''>Java</a>, <a href=''>Haskell</a>, <a href=''>Julia</a> &mdash; I have more modest experience of these languages.</li>
     </ul>
@@ -190,7 +200,7 @@
 
     <ul>
       <li><a href='http://d3js.org'>d3.js</a> &mdash; I've used this since 2011 to produce complex interactive charts.</li>
-      <li><a href='http://www.sinatrarb.com'>Sinatra</a> and (older versions of) <a href='http://rubyonrails.org'>Rails</a> &mdash; I've produced moderately complex production web apps.</li>
+      <li><a href='http://www.sinatrarb.com'>Sinatra</a> and (older versions of) <a href='http://rubyonrails.org'>Rails</a> &mdash; I've produced substantial production web apps.</li>
     </ul>
   </section>
 
@@ -225,7 +235,7 @@
     <p>Key features:</p>
 
     <ul>
-      <li><a href='http://github.com/tamc/excel_to_code'>Code</a> that takes an Excel spreadsheet and translates it into an equivalent model written in C.</li>
+      <li><a href='http://github.com/tamc/excel_to_code'>Code</a> that takes an Excel spreadsheet and turns it into an equivalent model written in C.</li>
       <li><a href='http://github.com/decc/twenty-fifty'>Code</a> to interface between the C library and the javascript in the browser.</li>
       <li>Bespoke javascript <a href='http://2050-calculator-tool.decc.gov.uk'>controls and charts</a>.</li>
     </ul>
