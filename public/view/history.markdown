@@ -10,7 +10,6 @@
     -   Grade A in lots of GCSEs (the exception was a B in English Language)
     -   Grade A in French, Physics, Maths, Further Maths A-Levels and in a Further Additional Maths AS.
     -   Captained the dinghy sailing team
-
 4.  Gained sponsorship from the civilian side of the [UK Ministry of Defence](http://www.mod.uk/careers/). Spent a nine months at their
     training centre before University and then worked each summer at:
     -   [GKN Westland Aerospace](http://www.aero.gknplc.com) in Yeovil
@@ -51,3 +50,4 @@
     - then took my whole team to the International Climate Change directorate, to help other countries replicate what we did
     - whilst in the International Directorate, I also looked after the forests, private finance and international climate finance team when their manager moved on.
     - then moved to the newly expanded Analysis Directorate, working for the Chief Economist
+14. After eight years of commuting from Brighton to London (a four hour round trip), I'd had enough and moved to a tiny firm in [Lewes](https://en.wikipedia.org/wiki/Lewes) [that helps children's nurseries](http://eyfs.info)
