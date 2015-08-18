@@ -4,7 +4,7 @@
 
 Hello. I'm an engineer. I live in [Brighton](https://en.wikipedia.org/wiki/Brighton) and work at a tiny firm in [Lewes](https://en.wikipedia.org/wiki/Lewes) [that helps children's nurseries](http://eyfs.info). 
 
-Before that I [I was a Deputy Director at the UK [Department
+Before that I was a Deputy Director at the UK [Department
 of Energy and Climate Change][decc]. I also do occasional freelance work through [Green on Black Ltd][gnb]. 
 
 Perhaps you are looking for information about my:
