@@ -18,6 +18,7 @@ If this list doesn’t cover what you want then feel free to contact me at <tom@
 News
 ----
 
+1.  I helped the Australian [Food, Energy, Environment and Water Network](http://gfws.fe2wnetwork.org) turn their Excel model of Food and Water scenarios into an [interactive site](http://gfws.fe2wnetwork.org).
 1.  I have left DECC. Not because I didn't like DECC. But because I have had enough of commuting from Brighton to London. I'm now working at a tiny local firm [that helps children's nurseries](http://eyfs.info),
 1.  Almost my last act at DECC was to create [short film about how we supply and use energy in the UK](https://www.youtube.com/watch?v=OnNwBpre3Lk). It was based on a talk I gave last year in London.
 1.  I don't like [Marginal Abatement Cost Curves](https://en.wikipedia.org/wiki/Marginal_abatement_cost), but some colleagues at DECC really do. They are also annoying to do in Excel, so I created a [chart generator](http://tamc.github.io/macc/) to help them out.
