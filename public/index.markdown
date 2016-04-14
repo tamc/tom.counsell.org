@@ -18,6 +18,7 @@ If this list doesn’t cover what you want then feel free to contact me at <tom@
 News
 ----
 
+1.  Very sad that [David MacKay](https://en.wikipedia.org/wiki/David_J._C._MacKay) has died. He taught me so much. 
 1.  I helped the Australian [Food, Energy, Environment and Water Network](http://www.fe2wnetwork.org) turn their Excel model of Food and Water scenarios into an [interactive site](http://gfws.fe2wnetwork.org).
 1.  I have left DECC. Not because I didn't like DECC. But because I have had enough of commuting from Brighton to London. I'm now working at a tiny local firm [that helps children's nurseries](http://eyfs.info),
 1.  Almost my last act at DECC was to create [short film about how we supply and use energy in the UK](https://www.youtube.com/watch?v=OnNwBpre3Lk). It was based on a talk I gave last year in London.
