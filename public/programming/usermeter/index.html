@@ -15,6 +15,11 @@
     <p>My boss, Steve, likes <a href='https://en.wikipedia.org/wiki/Steampunk'>steampunk</a>. He also liked the display we used to have to monitor what was going on with our servers. So, for Christmas I decided to make him an old-fashioned dial display that shows the current load on our servers. It uses the local WiFi to connect to <a href='https://aws.amazon.com/lambda/'>AWS Lambda</a> to get the current value of the relevant <a href='https://aws.amazon.com/cloudwatch/'>CloudWatch metric</a>, in our case requests/minute to our main servers.</p>
     
     <figure>
+      <img src='desk.jpg' width='500'>
+      <figcaption>The load meter on Steve's desk behind his lamp. Boxing day, so not much load.</figcaption>
+    </figure>
+
+    <figure>
       <img src='front.jpg' width='500'>
       <figcaption>This is the meter, showing 3600 requests/minute to our main servers. <br>The black cable provides power. Data is over wifi.</figcaption>
     </figure>
@@ -23,7 +28,7 @@
 
     <figure>
       <img src='back.jpg' width='500'>
-      <figcaption>This is the wiring, showing a WEMOS D1 Mini wired to the ammeter inputs <br> in series with a variable resistor.</figcaption>
+      <figcaption>This is the wiring, showing a WEMOS D1 Mini wired to the ammeter inputs <br> in series with a variable resistor. The black cable is power. The gold looking <br>zig-zag is the aerial. The mess on the top of the left peg is masking tape.</figcaption>
     </figure>
 
     <p>The brains is an <a href='https://espressif.com/en/products/hardware/esp8266ex/overview'>ESP-8266EX</a> in the form of a <a href='https://www.wemos.cc/product/d1-mini.html'>WEMOS D1 Mini</a>.</p>
@@ -35,6 +40,7 @@
       <li>The D0 pin of the WEMOS is wired to a variable potentiometer which is then wired to the positive pin of the ammeter.</li>
     </ol>
     </p>
+
 
     <p>The code is in two parts.<p>
     
