@@ -6,6 +6,7 @@ Back to the [home page](/)
 Live projects
 -------------
 
+-   [A UserMeter](usermeter/index.html) – using an old fashioned Ammeter to monitor our server load
 -   [The UK 2050 Calculator](http://github.com/decc/twenty-fifty/) – a visualisation of a complex excel model that allows you to explore the many ways the UK energy system could be changed.
 -   [excel_to_code](http://github.com/tamc/excel_to_code) - compiles Excel spreadsheets into pure C or pure Ruby code, so that they can server as the backend to visualisations, or be driven programatically.
 -   [Sankey](http://github.com/tamc/Sankey) - A javascript library for drawing [Sankey](http://en.wikipedia.org/wiki/Sankey_diagram) diagrams. 

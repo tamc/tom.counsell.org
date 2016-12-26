@@ -18,6 +18,7 @@ If this list doesn’t cover what you want then feel free to contact me at <tom@
 News
 ----
 
+1.  I've enjoyed making a [server load monitor](programming/usermeter/index.html) out of a 65 year old ammeter for my boss.
 1.  Very sad that [David MacKay](https://en.wikipedia.org/wiki/David_J._C._MacKay) has died. He taught me so much. 
 1.  I helped the Australian [Food, Energy, Environment and Water Network](http://www.fe2wnetwork.org) turn their Excel model of Food and Water scenarios into an [interactive site](http://gfws.fe2wnetwork.org).
 1.  I have left DECC. Not because I didn't like DECC. But because I have had enough of commuting from Brighton to London. I'm now working at a tiny local firm [that helps children's nurseries](http://eyfs.info),
