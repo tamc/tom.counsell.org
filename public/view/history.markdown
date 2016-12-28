@@ -11,7 +11,7 @@
     -   Grade A in French, Physics, Maths, Further Maths A-Levels and in a Further Additional Maths AS.
     -   Captained the dinghy sailing team
 4.  Gained sponsorship from the civilian side of the [UK Ministry of Defence](http://www.mod.uk/careers/). Spent nine months at their
-    training centre before University and then worked each summer at:
+    training centre before university and then worked each summer at:
     -   [GKN Westland Aerospace](http://www.aero.gknplc.com) in Yeovil
     -   The Guided Weapons and Surveillance Support Group in Malvern
     -   A (now dead?) start-up called Netcentric Solutions outside Cambridge
