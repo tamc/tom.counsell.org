@@ -2,9 +2,9 @@
 
 ![](tomcounsell.jpg)
 
-Hello. I'm an engineer. I live in [Brighton](https://en.wikipedia.org/wiki/Brighton) and work at a small firm in [Lewes](https://en.wikipedia.org/wiki/Lewes) [that helps children's nurseries](http://eyfs.info). Our main product is [Tapestry](https://tapestry.info), an online learning journal.
+Hello. I'm an engineer. I live in [Brighton](https://en.wikipedia.org/wiki/Brighton) in the UK. I work for an American charity called [Give Directly](https://givedirectly.org) that gives no-strings-attached cash to the poorest people, mostly in Africa, to eliminate extreme poverty.
 
-Before that I was a Deputy Director at the UK [Department
+Before that I worked at a small firm in [Lewes](https://en.wikipedia.org/wiki/Lewes) [that helps children's nurseries](http://eyfs.info) and whose main product was [Tapestry](https://tapestry.info), an online learning journal. Before that, I was a Deputy Director at the UK [Department
 of Energy and Climate Change][decc]. I also do occasional freelance work through [Green on Black Ltd][gnb]. 
 
 Perhaps you are looking for information about my:
