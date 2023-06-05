@@ -50,7 +50,6 @@ Elsewhere on the internet
 -------------------------
 
 * [tamc on github](https://github.com/tamc)
-* [Tom Counsell on linkedin](http://uk.linkedin.com/pub/tom-counsell/0/441/360/)
 
 
 [decc]: https://www.gov.uk/government/organisations/department-of-energy-climate-change
