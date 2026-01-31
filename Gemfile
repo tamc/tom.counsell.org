@@ -1,5 +1,5 @@
 source "http://rubygems.org"
-ruby "3.1.2"
+ruby "3.4.7"
 
 group :development do
 end
