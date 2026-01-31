@@ -53,5 +53,5 @@
 14. After eight years of commuting from Brighton to London (a four hour round trip), I'd had enough and moved to a tiny firm in [Lewes](https://en.wikipedia.org/wiki/Lewes) [that helps children's nurseries](http://eyfs.info)
     - Went from a few people in the founder's house to a grown-up firm with a team of ten engineers and a million dollar spend.
     - Spent lots of quality time with my children and fell in love with running across the South Downs
-15. My wife fell seriously ill, leading me to step-back and care for her and the children for a while
+15. My wife fell seriously ill, leading me to step-back and care for her and the children for a while. She died on 12 August 2024, aged 47.
 16. Became interested in [Effective Altruism](http://effectivealtruism.org) and started work for [Give Directly](https://givedirectly.org) who set the standard for other charities to beat, by providing no-strings-attached cash to the poorest people in a way that is quick, efficient, large scale and well tested.
