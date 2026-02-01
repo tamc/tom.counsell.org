@@ -19,6 +19,8 @@ News
 ----
 
 1.  My wife, [Professor Catherine Marijke Will](https://easst.net/easst-review/44-1/catherine-will-symposium/) died. Life is tough.
+1.  I have joined [Give Directly](https://givedirectly.org) a charity I've admired for years that, because of COVID now employs developers outside of New York.
+1.  I left [Tapestry](https://tapestry.info). Not because I didn't love Tapestry, but becaues my wife has cancer and I need time to care for her and the kids.
 1.  I've enjoyed making a [server load monitor](programming/usermeter/index.html) out of a 65 year old ammeter for my boss.
 1.  Very sad that [David MacKay](https://en.wikipedia.org/wiki/David_J._C._MacKay) has died. He taught me so much. 
 1.  I helped the Australian [Food, Energy, Environment and Water Network](http://www.fe2wnetwork.org) turn their Excel model of Food and Water scenarios into an [interactive site](http://gfws.fe2wnetwork.org).
