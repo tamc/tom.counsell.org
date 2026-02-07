@@ -1,0 +1,38 @@
+body {
+  font-size: 1.0em;
+  font-family: "Franklin Gothic Book"
+}
+
+#content {
+  width: 100%;
+  margin: 1em auto;  
+  max-width: 50em;
+}
+
+td {
+}
+
+h1, #contact {
+  width: 100%;
+  text-align: center;
+}
+
+#contact {
+  margin-bottom: 2em;
+}
+
+h1, h2 {
+  color: #b00;
+  font-family: "Big Caslon";
+  font-weight: normal;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin-bottom: 0.1em;
+}
+
+p, ol, ul {
+  margin-top: 0;
+}

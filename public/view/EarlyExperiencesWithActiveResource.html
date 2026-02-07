@@ -1,273 +1,69 @@
-<!DOCTYPE html 
-     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Early experiences with Active Resource</title>
-
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<style type="text/css" media="screen">
-		@import url( ../Static/style.css );
-	</style>
-	<link rel='alternate' type='application/rss+xml' title='RSS' href='http://tom.counsell.org/rss/EarlyExperiencesWithActiveResource' />
-	<script src='http://tom.counsell.org/Static/newpage.js' type='text/javascript'></script>
-		
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Early experiences with Active Resource</title>
+  <link rel="stylesheet" href="/index.css">
 </head>
-
-<body onkeypress='hotkey(event,"http://tom.counsell.org/edit/");'>
-<div id="wrapper">
-	<div id="masthead">
-		<div id="blogtitle" >
-			Early experiences with Active Resource
-		</div>
-	</div>
-	
-	<div id="insideWrapper">
-	
-		<div id="sidebar">
-			<div id="sidebox">
-				<div class="title"><a href="../index.html" title="Tom Counsell's Soks Wiki">Tom Counsell's Soks Wiki</a></div>
-			</div>
-			<br />
-	
-			<div id="sidebox1">
-				<div class="title">Key Pages</div>
-				
-				<a href='../index.html' class='automatic'>Home Page</a> <br/>
-<a href='SiteIndex.html' class='automatic'>Site Index</a> <br/>
-<a href='RecentChangesToThisSite.html' class=''>Recent Changes</a> <br/>
-			</div>
-			<br />
-
-			<div id="sidebox4">
-				<form style="padding: 0px; margin-top: 0px; margin-bottom: 0px;" id="searchform" method="get" action="http://tom.counsell.org/find/EarlyExperiencesWithActiveResource">
-					<div class="title">Search:</div>
-					<p style="padding: 0px; margin-top: 0px; margin-bottom: 0px;">
-						<input type="text" class="input" name="regex" id="search" size="15" />
-						<input name="submit" type="submit" tabindex="5" value="GO" />
-					</p>
-				</form>
-			</div>
-			<br />
-			
-			<div id='adbox'>
-				<div class='title'>Adverts</div>
-				<script type="text/javascript"><!--
-				google_ad_client = "pub-1825629230893907";
-				google_ad_width = 120;
-				google_ad_height = 90;
-				google_ad_format = "120x90_0ads_al";
-				google_ad_channel = "";
-				google_color_border = "000000";
-				google_color_bg = "000000";
-				google_color_link = "FFFFFF";
-				google_color_text = "CCCCCC";
-				google_color_url = "999999";
-				//-->
-				</script>
-				<script type="text/javascript"
-				  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-				  </script>
-<p>
-</p>
-			</div>
-<br/>			
-			<div id="sidebox2">
-				<div class="title">Backlinks</div>
-				
-					
-					
-					
-							
-								<a href='Programming.html'>Programming</a><br/>
-							
-					
-				
-			</div>
-			<br />
-	
-			<div id="sidebox3">
-				<div class="title">Other Pages</div>
-				<a href='History.html' class='automatic'>History</a> <br/>
-<a href='Phd.html' class='automatic'>PhD</a> <br/>
-<a href='StuffIDoAroundTheDepartment.html' class=''>Department work</a> <br/>
-<a href='CollegeWork.html' class='automatic'>College work</a> <br/>
-<a href='Programming.html' class='automatic'>Programming</a> <br/>
-			</div>
-			<br />
-			
-
-	
-			<div id="sidebox5">
-				<div class="title">Links</div>
-				<a href='http://tom.counsell.org/edit/TypeATitleHere'>Add a new page</a><br/>
-				<a href='http://tom.counsell.org/edit/PictureOfTypeATitleHere'>Upload a new picture</a><br/>
-				<a href='http://tom.counsell.org/edit/AttachedTypeATitleHere'>Upload a new file</a><br/>
-			</div>
-			<br />
-	
-			<div id="sidebox6">
-				<div class="title"><a href='http://www.soks.org'>Soks</a> Powered</div>
-				<a href='http://www.soks.org'>Soks</a> is a wiki written in ruby
-			</div>  
-			<br />
-	</div>
-	
-	<div id="contentwrapper">
-		<div id="content">
-			<br />
-			<div class="post">
-			<h1>Early experiences with Active Resource</h1>
-
-
-	<p>Last updated 23:04 BST Fri 30 June.</p>
-
-
-	<p>At the recent RailsConf David Heinemeier Hansson announced his ideas for an active resource library in <a href='http://www.rubyonrails.com' class=''>rails</a>.  His slides are available <a href='http://www.loudthinking.com/lt-files/worldofresources.pdf' class=''>here</a>.</p>
-
-
-	<p>Unfortunately the early version he checked into the <a href='http://dev.rubyonrails.org/browser/trunk/activeresource' class=''>rails edge repository</a> doesn&#8217;t quite match his slides.</p>
-
-
-	<p>Below are my (in progress) notes on getting it to work.</p>
-
-
-	<h2>Pre-requisites</h2>
-
-
-	<p>You need edge <a href='Rails.html' class='automatic'>rails</a>: <code>rake rails:freeze:edge</code></p>
-
-
-	<p>You need some rest-ful type routes. I&#8217;ve used: <code>script/plugin install simply_restful</code></p>
-
-
-	<p>You need a controller that has the same name as your model (e.g. PeopleController) with index, new, create, show, edit, update and delete methods. Each of these needs to respond sensibly to xml requests, e.g.:</p>
-
-
-<pre>
-<code>
-  def show
+<body>
+  <header>
+    <h1>Early experiences with Active Resource</h1>
+  </header>
+  <p>Last updated 23:04 BST Fri 30 June.</p>
+<p>At the recent RailsConf David Heinemeier Hansson announced his ideas for an active resource library in <a href="http://www.rubyonrails.com">rails</a>. His slides are available <a href="http://www.loudthinking.com/lt-files/worldofresources.pdf">here</a>.</p>
+<p>Unfortunately the early version he checked into the <a href="http://dev.rubyonrails.org/browser/trunk/activeresource">rails edge repository</a> doesn’t quite match his slides.</p>
+<p>Below are my (in progress) notes on getting it to work.</p>
+<h2>Pre-requisites</h2>
+<p>You need edge <a href="Rails.html">rails</a>: <code>rake rails:freeze:edge</code></p>
+<p>You need some rest-ful type routes. I’ve used: <code>script/plugin install simply_restful</code></p>
+<p>You need a controller that has the same name as your model (e.g. PeopleController) with index, new, create, show, edit, update and delete methods. Each of these needs to respond sensibly to xml requests, e.g.:</p>
+<pre><code>def show
     @patch = Patch.find(params[:id])
     respond_to do |format|
       format.html
       format.xml { render :xml =&gt; @patch.to_xml }
     end
   end
-</code>
-</pre>
-
-	<h2>Initialization</h2>
-
-
-The example that DHH gave:
-<pre>
-<code>
-Person = ActiveResource::Struct.new do |person|
-  person.uri = "http://api.myremote.com/people" 
-  person.credentials :name =&gt; "me", :password =&gt; "password" 
+</code></pre>
+<h2>Initialization</h2>
+<p>The example that DHH gave:</p>
+<pre><code>Person = ActiveResource::Struct.new do |person|
+  person.uri = &quot;http://api.myremote.com/people&quot; 
+  person.credentials :name =&gt; &quot;me&quot;, :password =&gt; &quot;password&quot; 
 end
-</code>
-</pre>
-
-What works in the code:
-<pre>
-<code>
-Person = ActiveResource::Struct.create
-Person.site = "http://api.myremote.com/people" 
-</code>
-</pre>
-
-	<h2>Get</h2>
-
-
-You can then get an object:
-<pre>
-<code>
-p = Person.find 1
-</code>
-</pre>
-
-	<p>There is an error if you try and <code>find(:all)</code> and no objects exists.</p>
-
-
-	<h2>Put / Update</h2>
-
-
-Saving doesn&#8217;t work, because ActiveResource doesn&#8217;t set the content-type. Adding this at the start of the request method in <a href='http://dev.rubyonrails.org/browser/trunk/activeresource/lib/active_resource/connection.rb#L60' class=''>ActiveResource::Connection</a> seems to help:
-<pre>
-<code>
-arguments &lt;&lt; { 'content-type' =&gt; 'application/xml' }
-</code>
-</pre>
-
-	<h2>Post / Create</h2>
-
-
-	<p>Creating a record doesn&#8217;t work, as <code>Person.save</code> currently goes straight to the put method.</p>
-
-
-	<p>I made this changes to get a create function:</p>
-
-
-<a href='http://dev.rubyonrails.org/browser/trunk/activeresource/lib/active_resource/base.rb#L65' class=''>ActiveResource::Base</a>
-<pre>
-<code>
-def save
+</code></pre>
+<p>What works in the code:</p>
+<pre><code>Person = ActiveResource::Struct.create
+Person.site = &quot;http://api.myremote.com/people&quot;
+</code></pre>
+<h2>Get</h2>
+<p>You can then get an object:</p>
+<pre><code>p = Person.find 1
+</code></pre>
+<p>There is an error if you try and <code>find(:all)</code> and no objects exists.</p>
+<h2>Put / Update</h2>
+<p>Saving doesn’t work, because ActiveResource doesn’t set the content-type. Adding this at the start of the request method in <a href="http://dev.rubyonrails.org/browser/trunk/activeresource/lib/active_resource/connection.rb#L60">ActiveResource::Connection</a> seems to help:</p>
+<pre><code>arguments &lt;&lt; { &#39;content-type&#39; =&gt; &#39;application/xml&#39; }
+</code></pre>
+<h2>Post / Create</h2>
+<p>Creating a record doesn’t work, as <code>Person.save</code> currently goes straight to the put method.</p>
+<p>I made this changes to get a create function:</p>
+<p><a href="http://dev.rubyonrails.org/browser/trunk/activeresource/lib/active_resource/base.rb#L65">ActiveResource::Base</a></p>
+<pre><code>def save
     id ? update : create
 end
-</code>
-</pre>
-
-<pre>
-<code>
-def create
-  attributes["id"] = connection.post(self.class.collection_path, to_xml)
+</code></pre>
+<pre><code>def create
+  attributes[&quot;id&quot;] = connection.post(self.class.collection_path, to_xml)
 end
-</code>
-</pre>
-
-<a href='http://dev.rubyonrails.org/browser/trunk/activeresource/lib/active_resource/connection.rb#L54' class=''>ActiveResource::Connection</a>
-<pre>
-<code>
-def post(path, body)
+</code></pre>
+<p><a href="http://dev.rubyonrails.org/browser/trunk/activeresource/lib/active_resource/connection.rb#L54">ActiveResource::Connection</a></p>
+<pre><code>def post(path, body)
   response = request(:post, path, body)
-  return response['Location'][/\/([^\/]*?)$/,1] # The id
+  return response[&#39;Location&#39;][/\/([^\/]*?)$/,1] # The id
 end
-</code>
-</pre>
+</code></pre>
 
-<div class='command'>
-	<a href='http://tom.counsell.org/edit/EarlyExperiencesWithActiveResource' accesskey="E" >Edit this page</a> or
-	watch for changes using <a href='http://tom.counsell.org/rss/EarlyExperiencesWithActiveResource'>RSS</a>.
-</div>
-			<br />
-		</div>
-		<br />
-	</div>
-</div>
-
-
-
-<div id="footer">
-
- <br />From an original theme on <a class="footerLink" href='http://wordpress.org' title='Proudly powered by WordPress, state-of-the-art semantic personal publishing platform'>WordPress 1.5</a>. <br />
-
-This theme started out as <a class="footerLink" href="http://www.thoughtmechanics.com/blog/templates">Benevolence</a><br /> and ended up as  <a class="footerLink" href="http://theloo.org/2005/03/06/borderline-chaos/">Borderline Chaos (1.9)</a>.  <br />It validates in <a class="footerLink" href="http://validator.w3.org/check/referer">XHTML</a> and <a class="footerLink" href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> minus plugins.
-<br />
-
-<a class="footerLink" href="http://www.managedtasks.com/wpthemes/blog">WordPress 1.5 Themes</a> is &copy; the Author. 
-
-
-<br /><br />
-
-</div>
-
-
-
-</div>
-
-
-</div>
 </body>
-
 </html>
