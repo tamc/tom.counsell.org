@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<script src="d3.min.js" charset="utf-8"></script>
+
+<style>
+body {
+  background: black;
+  color: white;
+}
+svg {
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  display: none;
+  font-size: 200px;
+  color: white;
+}
+
+</style>
+
+<title>How fast can dinosaurs run with an egg?</title>
+
+
+<span id='seconds'>--</span>&nbsp;seconds
+
+<button id='start' name='start'>Start</button>
+
+<script>
+
+display = d3.select('#seconds');
+
+start_time = undefined;
+running = false;
+
+function displayTime() {
+  if(start_time == undefined) {
+    display.html("--");
+  } else if(running) {
+    elapsed = (new Date()).getTime() - start_time;
+    display.transition().text(elapsed/1000);
+  }
+}
+
+button = d3.select('#start');
+
+button.on('click', function() {
+    if(running) {
+      running = false;
+    } else {
+      start_time = (new Date()).getTime();
+    }
+    });
+
+
+
+
+setInterval(displayTime,100);
+
+</script>
+

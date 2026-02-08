@@ -1,0 +1,203 @@
+---
+title: "Morphological (combinatorial) analysis script"
+css:
+  - /index.css
+---
+
+Zwicky proposed an approach to problem solving (described [in this pdf](http://www.swemorph.com/pdf/new-methods.pdf)) that is rather tedious to do by hand. The script below helps. It requires [ruby](Ruby.html) 1.8+. If you want to know more about Morphological Analysis, take a look at the Swedish Morphological Society’s site at [www.swemorph.com](http://www.swemorph.com)
+
+```
+#!/usr/bin/ruby
+# File name: zwicky.rb
+# (c) 2005 Tom Counsell tom@counsell.org
+# Licenced under the GPL
+#
+# Helps with Zwicky's morphological analysis
+# See http://www.swemorph.com/pdf/new-methods.pdf for details of that.
+#
+# Requires ruby 1.8
+#
+# To use: ruby zwicky.rb parameterfile constraintfile
+#
+# The parameterfile is a YAML text file formated like this:
+# Order:
+# - Reflect
+# - Add reflector
+# - Pigment
+# - Polymer
+# - Paper surface
+# 
+# Reflect:
+#  - Off air
+#  - Off polymer
+#  - Off pigment
+#  - Off paper top
+#  - Off paper bulk
+#
+# The constraint file is optional.  
+# It lists incompatible states.
+# It is a YAML text file formated like this:
+# Off air:
+#  - No addition
+#  - Above pigment
+#  - Above paper top
+#  - Above paper bulk
+# 
+# Off polymer:
+#  - Above polymer
+#  - Remove polymer
+#  - Remove paper
+#  - Above paper top
+#   
+# Let me know of any bugfixes or suggestions
+require 'yaml'
+
+class Parameter
+
+    attr_reader :previous_parameter, :name, :states
+
+    def initialize( previous_parameter, name, states )
+        @name, @states = name, states
+        @previous_parameter = previous_parameter
+        @current_state = 0
+    end
+
+    def state
+        states[ @current_state ]
+    end
+
+    def next_state
+        @current_state += 1
+        if @current_state >= states.size
+            return :end_of_sequence if previous_parameter == :no_previous_parameter
+            @current_state = 0
+            previous_parameter.next_state 
+        end
+    end
+end
+
+class Problem
+    include Enumerable
+
+    attr_reader :parameters, :constraints
+
+    def initialize( parameters, constraints, order )
+        @parameters = []
+        @constraints = constraints
+        fully_constrain
+        previous_parameter = :no_previous_parameter
+        order.each do |name|
+            states = parameters[ name ]
+            @parameters << (previous_parameter = Parameter.new(previous_parameter,name,states))
+        end
+    end
+
+    def names
+        parameters.map { |parameter| parameter.name }
+    end
+
+    def solution
+        parameters.map { |parameter| parameter.state }
+    end
+
+    def number_of_solutions
+        parameters.inject(1) { |total,parameter| total = total * parameter.states.size }
+    end
+
+    def next_solution
+        parameters.last.next_state
+    end
+
+    def each
+        yield solution until next_solution  :end_of_sequence
+    end
+
+    def solution_valid?
+        solution.each do |state|
+            next unless @constraints.has_key?( state )
+            return false unless (@constraints[ state ] & solution).size  0
+        end
+        true
+    end
+
+    def fully_constrain
+        constraints.each do |stateA,otherstates|
+            otherstates.each do |otherstate|
+                unless constraints[otherstate] && constraints[otherstate].include?(stateA)
+                    constraints[otherstate] ||= []
+                    constraints[otherstate] << stateA
+                end
+            end
+        end
+    end
+
+    def constraints_as_grid
+        grid = []
+        row = [‘Parameter’,’’,]
+        parameters.each do |parameter|
+            row << parameter.name
+            (parameter.states.size – 1).times { row << ’’ }
+        end
+        grid << row
+        row = [’’,’States’]
+        parameters.each do |parameter|
+            parameter.states.each do |state|
+                row << state
+            end
+        end
+        grid << row
+        parameters.each do |parameterA|
+            pname = parameterA.name
+            parameterA.states.each do |stateA|
+                row = [pname,stateA]
+                pname = ’’
+                parameters.each do |parameterB|
+                    parameterB.states.each do |stateB|
+                        row << (constraints[stateA].include?(stateB) ? ‘x’ : ’’)
+                    end
+                end
+                grid << row
+            end
+        end
+        grid 
+    end
+
+	end
+
+	parameters = YAML::load(IO.readlines(ARGV0).join)
+order = parameters[‘Order’] || parameters.keys
+parameters.delete(‘Order’)
+
+	constraints = ARGV1 ? YAML::load(IO.readlines(ARGV1).join) : {}
+
+	problem = Problem.new( parameters, constraints, order )
+
+	puts “Morphological Box”
+
+	problem.parameters.each do |parameter|
+    puts ”#{parameter.name}\t#{parameter.states.join(”\t”)}” 
+end
+
+	puts 
+puts “Constraints”
+
+	problem.constraints_as_grid.each do |row|
+    puts row.join(”\t”)
+end
+
+	puts
+puts “Alternatives”
+
+	puts “Number\t#{problem.names.join(”\t”)}” 
+total_valid = 0
+
+	problem.each_with_index do |solution,index|
+    if problem.solution_valid?
+        puts ”#{index+1}\t#{solution.map{ |state| state =~ /^leave/i ? ”-” : state }.join(”\t”)}” 
+        total_valid += 1
+    end
+end
+
+	puts ”” 
+puts ”#{problem.number_of_solutions} solutions, of which #{total_valid} valid.”
+```
