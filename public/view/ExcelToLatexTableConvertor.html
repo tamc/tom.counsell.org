@@ -31,39 +31,39 @@
 #
 # Let me know of any bugfixes or suggestions
 
-require &#39;csv&#39;
+require 'csv'
 
 def escape_latex( string )
-    string.gsub( %r{([&amp;$#%])} ) { &#39;\\&#39; + $1 }
+    string.gsub( %r{([&amp;$#%])} ) { '\\' + $1 }
 end
 
 text = `pbpaste`
-lines = text.split(&quot;\r&quot;)
-lines = lines.map { |line| line.split(&quot;\t&quot;) }
+lines = text.split("\r")
+lines = lines.map { |line| line.split("\t") }
 columns = lines.map { |line| line.size }.max
 header = lines.shift
 
-pbcopy = IO.popen(&#39;pbcopy&#39;,&#39;w+&#39;)
+pbcopy = IO.popen('pbcopy','w+')
 
-pbcopy.puts &quot;\\begin{center}&quot; 
-pbcopy.puts &quot;\\begin{longtable}{#{&#39;l &#39;*columns}}&quot; 
-pbcopy.puts header.map{ |entry| escape_latex entry }.join(&#39; &amp; &#39;)+&#39; \\\\&#39;
-pbcopy.puts &quot;\\endfirsthead&quot; 
-pbcopy.puts header.map{ |entry| escape_latex entry }.join(&#39; &amp; &#39;)+&#39; \\\\&#39;
-pbcopy.puts &quot;\\endhead&quot; 
-pbcopy.puts &quot;\\multicolumn{#{columns}}{r}{{Continued\\ldots}} \\&quot; 
-pbcopy.puts &quot;\\endfoot&quot; 
-pbcopy.puts &quot;\\hline&quot; 
-pbcopy.puts &quot;\\endlastfoot&quot; 
+pbcopy.puts "\\begin{center}" 
+pbcopy.puts "\\begin{longtable}{#{'l '*columns}}" 
+pbcopy.puts header.map{ |entry| escape_latex entry }.join(' &amp; ')+' \\\\'
+pbcopy.puts "\\endfirsthead" 
+pbcopy.puts header.map{ |entry| escape_latex entry }.join(' &amp; ')+' \\\\'
+pbcopy.puts "\\endhead" 
+pbcopy.puts "\\multicolumn{#{columns}}{r}{{Continued\\ldots}} \\" 
+pbcopy.puts "\\endfoot" 
+pbcopy.puts "\\hline" 
+pbcopy.puts "\\endlastfoot" 
 pbcopy.puts
 lines.each do |row| 
-    pbcopy.puts row.map{ |entry| escape_latex entry }.join(&#39; &amp; &#39;)+&#39; \\\\&#39; 
+    pbcopy.puts row.map{ |entry| escape_latex entry }.join(' &amp; ')+' \\\\' 
 end
 pbcopy.puts
-pbcopy.puts &quot;\\end{longtable}&quot; 
-pbcopy.puts &quot;\\end{center}&quot; 
+pbcopy.puts "\\end{longtable}" 
+pbcopy.puts "\\end{center}" 
 pbcopy.close_write
-puts pbcopy.gets || &quot;Ok. In clipboard&quot;
+puts pbcopy.gets || "Ok. In clipboard"
 </code></pre>
 
 </body>

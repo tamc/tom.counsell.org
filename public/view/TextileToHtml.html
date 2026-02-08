@@ -11,7 +11,7 @@
     <h1>Textile to HTML</h1>
   </header>
   <p>Textile is a markup language that is meant to make it quick and easy to write basic web pages for wikis, blogs and other uses. Redcloth is a <a href="Ruby.html">ruby</a> class that converts textile to html, written by _why. Details are at <a href="http://www.whytheluckystiff.net/ruby/redcloth/">http://www.whytheluckystiff.net/ruby/redcloth/</a> . Unfortunately, due to my own failings, I find it hard to understand _why’s code, so I wrote a partial reimplementation bellow. This has the benefit of (for me) being clearer and easier to extend. The drawback is that it doesn’t do all that _why’s version does and is slower. But it is here in case anyone finds it useful.</p>
-<pre><code>require &#39;strscan&#39;
+<pre><code>require 'strscan'
 
 # Note: Does not implement anything beyond that on http://hobix.com/textile/
 # i.e. No markdown, link titles, and converting out of range ASCII
@@ -21,7 +21,7 @@
 # Feel free to do whatever you like with the code.
 #
 # Use is the same as for Redcloth (except that none of the options work):
-# html = TextileParser.new( &quot;textile string&quot;).to_html 
+# html = TextileParser.new( "textile string").to_html 
 #
 class TextileParser
 
@@ -48,7 +48,7 @@ class TextileParser
         [ //, :code_tag ],  # Can be inline as well as in a block
         [ //, :notextile_tag ],  # Can be inline as well as in a block
         [ /@(\S.*?\S)@/, :quick_escape_code ], 
-        [ /&quot;(.+?)&quot;:(\S*\w\/?)/, :textile_link ],
+        [ /"(.+?)":(\S*\w\/?)/, :textile_link ],
         [ /\[(.+?)\]:(\S*\w\/?)/, :textile_link_alias ],
         [ /!(.+?)!(\S*)/, :image_link ],
         [ /([A-Z0-9]+)\((.*?)\)/, :acronym ],
@@ -68,46 +68,46 @@ class TextileParser
 
     # Then these are applied to phrases from above
     PHRASE_MODIFIERS = [ 
-        [ &#39;__&#39;, &#39;i&#39; ],
-        [ &#39;**&#39;, &#39;b&#39; ],
-        [ &#39;_&#39;, &#39;em&#39; ],
-        [ &#39;*&#39;, &#39;strong&#39; ],
-        [ &#39;??&#39;, &#39;cite&#39; ],
-        [ &#39;-&#39;, &#39;del&#39; ],
-        [ &#39;+&#39;, &#39;ins&#39; ],
-        [ &#39;^&#39;, &#39;sup&#39; ],
-        [ &#39;~&#39;, &#39;sub&#39; ],
-        [ &#39;%&#39;, &#39;span&#39; ], # How to avoid when people use % as in 3.0% growth?
+        [ '__', 'i' ],
+        [ '**', 'b' ],
+        [ '_', 'em' ],
+        [ '*', 'strong' ],
+        [ '??', 'cite' ],
+        [ '-', 'del' ],
+        [ '+', 'ins' ],
+        [ '^', 'sup' ],
+        [ '~', 'sub' ],
+        [ '%', 'span' ], # How to avoid when people use % as in 3.0% growth?
         ].collect! { |regexp,tag| [ /^#{Regexp.escape(regexp)}/, /#{Regexp.escape(regexp)}$/, tag ] }
 
     # Character substitutions done last to any words
     GLYPHS = [
-        [ /^\&#39;/, &#39;�&#39; ], # single opening
-        [ /^&quot;/, &#39;�&#39; ], # double opening
-        [ /\&#39;$/, &#39;�&#39; ], # single closing
-           [ /\&quot;$/, &#39;�&#39; ], # double closing
-        [ /\.{3}$/, &#39;\1�&#39; ], # ellipsis
-        [ &#39;--&#39;, &#39;\1�&#39; ], # em dash
-        [ &#39;-&gt;&#39;, &#39; ? &#39; ], # right arrow
-        [ &#39;-$&#39;, &#39; � &#39; ], # en dash
+        [ /^\'/, '�' ], # single opening
+        [ /^"/, '�' ], # double opening
+        [ /\'$/, '�' ], # single closing
+           [ /\"$/, '�' ], # double closing
+        [ /\.{3}$/, '\1�' ], # ellipsis
+        [ '--', '\1�' ], # em dash
+        [ '-&gt;', ' ? ' ], # right arrow
+        [ '-$', ' � ' ], # en dash
 
-        [ &#39;(TM)&#39;, &#39;�&#39; ], # trademark
-        [ &#39;(R)&#39;, &#39;�&#39; ], # registered
-        [ &#39;(C)&#39;, &#39;�&#39; ] # copyright
+        [ '(TM)', '�' ], # trademark
+        [ '(R)', '�' ], # registered
+        [ '(C)', '�' ] # copyright
     ]
 
     # This is just used to give the ouput html a more beautiful layout
     # All tags in here will get a newline after they are output
     # and the indent for following lines increased by the number
-    INDENTING_TAGS = {     &#39;ul&#39; =&gt; 1,
-                        &#39;ol&#39; =&gt; 1,
-                        &#39;li&#39; =&gt; 0,
-                        &#39;blockquote&#39; =&gt; 1,
-                        &#39;table&#39; =&gt; 1,
-                        &#39;tr&#39; =&gt; 1,
-                        &#39;td&#39; =&gt; 0,
-                        &#39;th&#39; =&gt; 0,
-                        &#39;p&#39; =&gt; 0,
+    INDENTING_TAGS = {     'ul' =&gt; 1,
+                        'ol' =&gt; 1,
+                        'li' =&gt; 0,
+                        'blockquote' =&gt; 1,
+                        'table' =&gt; 1,
+                        'tr' =&gt; 1,
+                        'td' =&gt; 0,
+                        'th' =&gt; 0,
+                        'p' =&gt; 0,
                      }
 
     def initialize( text )
@@ -117,7 +117,7 @@ class TextileParser
     def to_html( settings = nil )
         reset
         convert_text
-        return html.chomp.chomp # the tests don&#39;t have any trailing \ns
+        return html.chomp.chomp # the tests don't have any trailing \ns
     end
 
     private
@@ -127,7 +127,7 @@ class TextileParser
     def convert_text
         until @scanner.eos?
             send( BLOCK_COMMANDS.detect { |regexp, method| @scanner.scan( regexp ) }[1] )
-            add_to_html &quot;\n&quot; # Prettier html if extra space between blocks 
+            add_to_html "\n" # Prettier html if extra space between blocks 
         end
         insert_any_link_aliases
         html
@@ -136,14 +136,14 @@ class TextileParser
     # These are all the block commands
 
     def paragraph_block
-        tag( &#39;p&#39;, parse_attributes( @scanner[1] ) ) do 
+        tag( 'p', parse_attributes( @scanner[1] ) ) do 
             standard_paragraph
         end
     end
 
     def quote_block
-        tag( &quot;blockquote&quot;, parse_attributes( @scanner[1] ) ) do
-            tag &#39;p&#39; do
+        tag( "blockquote", parse_attributes( @scanner[1] ) ) do
+            tag 'p' do
                 standard_paragraph
             end
         end
@@ -151,13 +151,13 @@ class TextileParser
 
     def unspecified_block
         @scanner.unscan
-        tag &#39;p&#39; do
+        tag 'p' do
             standard_paragraph
         end
     end
 
     def heading_block
-        tag( &quot;h#{@scanner[1]}&quot;, parse_attributes( @scanner[2] ) ) do
+        tag( "h#{@scanner[1]}", parse_attributes( @scanner[2] ) ) do
             standard_line # Assume titles may only be on one line
         end 
     end
@@ -166,20 +166,20 @@ class TextileParser
         ordered = list_ordered? # See what sort of list we have
         depth = list_depth
         @scanner.unscan # So that the lines can be scanned individually
-        tag( ordered ? &#39;ol&#39; : &#39;ul&#39; ) do
+        tag( ordered ? 'ol' : 'ul' ) do
             list_line( ordered, depth ) until end_of_list?( depth )
         end
     end
 
     def table_block
-        tag( &#39;table&#39;, parse_attributes( @scanner[1] ) ) do
+        tag( 'table', parse_attributes( @scanner[1] ) ) do
             table_line until end_of_paragraph?
         end
     end
 
     def unspecified_table_block
         @scanner.unscan
-        tag( &#39;table&#39; ) do
+        tag( 'table' ) do
             table_line until end_of_paragraph?
         end
     end
@@ -187,9 +187,9 @@ class TextileParser
     def footnote_block
         number = @scanner[1]
         attributes = parse_attributes( @scanner[2] )
-        attributes[:id] = &quot;fn#{number}&quot; 
-        tag &#39;p&#39;, attributes do
-            add_to_html &quot;#{number} &quot; 
+        attributes[:id] = "fn#{number}" 
+        tag 'p', attributes do
+            add_to_html "#{number} " 
             standard_line until end_of_paragraph?
         end
     end
@@ -197,15 +197,15 @@ class TextileParser
     # Now descend into methods dealing with lines of text
 
     def pre_tag
-        escape_tag &#39;pre&#39;
+        escape_tag 'pre'
     end
 
     def code_tag
-        escape_tag &#39;code&#39;
+        escape_tag 'code'
     end
 
     def notextile_tag
-        escape_tag &#39;notextile&#39;, false
+        escape_tag 'notextile', false
     end
 
     # This escapes until a matching close tag
@@ -214,21 +214,21 @@ class TextileParser
         level = 1
         while level &gt; 0
             break unless @scanner.scan(/(.*?)(&lt;(\/)?#{tag}.*?&gt;)/m) # Breaks if no closing tag
-            add_to_html( htmlesc( @scanner[1] || &quot;&quot; ) )
+            add_to_html( htmlesc( @scanner[1] || "" ) )
             level = level + ( @scanner[3] ? -1 : 1 )
             add_to_html( htmlesc( @scanner[2] ) ) unless level  0
         end
-        add_to_html &quot;&quot; if include_tag_in_output
+        add_to_html "" if include_tag_in_output
     end
 
     def quick_escape_code
-        tag &#39;code&#39; do 
+        tag 'code' do 
             add_to_html( htmlesc( @scanner[1] ) )
         end
     end
 
     def list_line( ordered, depth )
-        tag &#39;li&#39; do
+        tag 'li' do
             @scanner.scan(/(#+|\*+)\s+/)
             if ( list_ordered?  ordered ) &amp;&amp; ( list_depth == depth )
                 standard_line
@@ -242,7 +242,7 @@ class TextileParser
         # Are their row attributes at that start of the line?
         attributes = @scanner.scan(/(\{.+?\})\.\s+/) ? parse_attributes(@scanner[1]) : {}     
         @scanner.scan(/\|/) # Get rid of any leading cell opening
-        tag( &#39;tr&#39;, attributes ) do 
+        tag( 'tr', attributes ) do 
             table_cell until end_of_table_line?
         end
     end    
@@ -264,7 +264,7 @@ class TextileParser
     def table_cell
         # Style defined at start of cell ?
         attributes = @scanner.scan(/(_)?(\S*?)\.\s*/) ?  parse_attributes(@scanner[2]) : {}
-        tag( @scanner[1] ? &#39;th&#39; : &#39;td&#39;, attributes) do 
+        tag( @scanner[1] ? 'th' : 'td', attributes) do 
             until end_of_table_cell?
                 send( TABLE_INLINE_COMMANDS.detect { |regexp, method| @scanner.scan( regexp ) }[1] )
             end    
@@ -272,11 +272,11 @@ class TextileParser
     end
 
     def footnote
-        add_to_html &quot;#{@scanner[1]}#{@scanner[2]}&quot; 
+        add_to_html "#{@scanner[1]}#{@scanner[2]}" 
     end
 
     def acronym
-        add_to_html &quot;#{@scanner[1]}&quot; 
+        add_to_html "#{@scanner[1]}" 
     end
 
     def phrase
@@ -287,11 +287,11 @@ class TextileParser
         # Open tags
         PHRASE_MODIFIERS.each do |start_r, end_r, tag|
             if word =~ start_r
-                word = $&#39; # The bit after the match
+                word = $' # The bit after the match
                 # Look for matching brackets that indicate there are attributes
                 if word =~ /(\(.+?\)|\{.+?\}|\[.+?\])/                 
                     open_tag( tag, parse_attributes( $1 ) )
-                    word = $&#39;
+                    word = $'
                 else
                     open_tag tag
                 end
@@ -320,17 +320,17 @@ class TextileParser
         @scanner.matched =~ /^!([&lt;&gt;]*)(.*?)(!|\((.*?)\)!)($|(:(.+?)$))/
         alignment, src, title, url = $1, $2, $4, $7
         attributes = {}
-        attributes[:style] = &#39;float:right&#39; if alignment  &#39;&gt;&#39;
-        attributes[:style] = &#39;float:left&#39; if alignment  &#39;&lt;&#39;
+        attributes[:style] = 'float:right' if alignment  '&gt;'
+        attributes[:style] = 'float:left' if alignment  '&lt;'
 
         attributes[:src] = src
         attributes[:alt] = attributes[ :title ] = title if title
         if url
-            tag &#39;a&#39;, { :href =&gt; url } do
-                open_tag &#39;img&#39;, attributes, true
+            tag 'a', { :href =&gt; url } do
+                open_tag 'img', attributes, true
             end
         else
-            open_tag &#39;img&#39;, attributes, true
+            open_tag 'img', attributes, true
         end    
     end
 
@@ -339,7 +339,7 @@ class TextileParser
     end
 
     def textile_link
-        add_to_html &quot;#{@scanner[1]}&quot; 
+        add_to_html "#{@scanner[1]}" 
     end
 
     def textile_link_alias
@@ -350,7 +350,7 @@ class TextileParser
     # These feels clunky, and is done last
     def insert_any_link_aliases
         @aliases.each do |als, href|
-            html.gsub!( /href=&quot;#{als}&quot;/, &quot;href=\&quot;#{href}\&quot;&quot; )
+            html.gsub!( /href="#{als}"/, "href=\"#{href}\"" )
         end
     end
 
@@ -372,38 +372,38 @@ class TextileParser
             # This is just stuff to make the html look pretty
             if (indent = INDENTING_TAGS[ open_tag ] ) 
                 if indent == 0
-                    add_to_html &quot;&quot; 
-                    add_to_html &quot;\n&quot; 
+                    add_to_html "" 
+                    add_to_html "\n" 
                 else
-                    add_to_html &quot;\n&quot; unless html =~ /\n$/
+                    add_to_html "\n" unless html =~ /\n$/
                     @indent -= indent
-                    add_to_html( &quot;\t&quot; * @indent )
-                    add_to_html &quot;&quot; 
-                    add_to_html &quot;\n&quot; 
+                    add_to_html( "\t" * @indent )
+                    add_to_html "" 
+                    add_to_html "\n" 
                 end
             else
-                add_to_html &quot;&quot; 
+                add_to_html "" 
             end
             return if open_tag == tag
         end
     end
 
     def open_tag( tag, attributes = {}, no_close_tag = false )
-        add_to_html( &quot;\t&quot; * @indent )
+        add_to_html( "\t" * @indent )
 
-        add_to_html &quot;&lt;#{tag}&quot; 
+        add_to_html "&lt;#{tag}" 
 
-        attributes.each { |key, value|     add_to_html( &quot; #{key.to_s}=\&quot;#{value.to_s}\&quot;&quot; )    }
+        attributes.each { |key, value|     add_to_html( " #{key.to_s}=\"#{value.to_s}\"" )    }
 
         if no_close_tag
-            add_to_html &quot; /&gt;&quot; 
+            add_to_html " /&gt;" 
             return
         end
 
-        add_to_html &quot;&gt;&quot; 
+        add_to_html "&gt;" 
 
         if (indent = INDENTING_TAGS[ tag ] )            
-            add_to_html &quot;\n&quot; unless indent == 0
+            add_to_html "\n" unless indent == 0
             @indent += indent
         end
         open_tags &lt;&lt; tag
@@ -414,36 +414,36 @@ class TextileParser
     end
 
     def parse_attributes( attribute_text )
-        return {} unless attribute_text &amp;&amp; attribute_text != &quot;&quot; 
-        a = { :style =&gt; &quot;&quot; }
+        return {} unless attribute_text &amp;&amp; attribute_text != "" 
+        a = { :style =&gt; "" }
 
         # The hand-entered classes, ids, styles and langs
-        # These are replaced with &quot;&quot; so their content cannot be matched below
+        # These are replaced with "" so their content cannot be matched below
         a[:lang] = $1 if attribute_text =~ /\[(.+?)\]/
-        a[:class] = $1 if attribute_text.sub!(/\((.+?)\)/,&#39;&#39;)
+        a[:class] = $1 if attribute_text.sub!(/\((.+?)\)/,'')
         a[:class], a[:id] = $1, $2 if a[:class] =~  /^(.*?)#(.*)$/
-        a[:style] &lt;&lt; &quot;#{$1};&quot; if attribute_text.sub!(/\{(.+?)\}/,&#39;&#39;)
+        a[:style] &lt;&lt; "#{$1};" if attribute_text.sub!(/\{(.+?)\}/,'')
 
         # Various padding and indents
-        a[:style] &lt;&lt; &quot;padding-left:#{ $1.length }em;&quot; if attribute_text =~ /(\(+)/
-        a[:style] &lt;&lt; &quot;padding-right:#{ $1.length }em;&quot; if attribute_text =~ /(\)+)/        
+        a[:style] &lt;&lt; "padding-left:#{ $1.length }em;" if attribute_text =~ /(\(+)/
+        a[:style] &lt;&lt; "padding-right:#{ $1.length }em;" if attribute_text =~ /(\)+)/        
 
         # The various alignments
-        a[:style] &lt;&lt; &quot;text-align:left;&quot; if attribute_text =~ /&lt;(?!&gt;)/
-        a[:style] &lt;&lt; &quot;text-align:right;&quot; if attribute_text =~ /(?!&lt;)&gt;/
-        a[:style] &lt;&lt; &quot;text-align:justify;&quot; if attribute_text =~ /&lt;&gt;/
-        a[:style] &lt;&lt; &quot;text-align:center;&quot; if attribute_text =~ /=/
+        a[:style] &lt;&lt; "text-align:left;" if attribute_text =~ /&lt;(?!&gt;)/
+        a[:style] &lt;&lt; "text-align:right;" if attribute_text =~ /(?!&lt;)&gt;/
+        a[:style] &lt;&lt; "text-align:justify;" if attribute_text =~ /&lt;&gt;/
+        a[:style] &lt;&lt; "text-align:center;" if attribute_text =~ /=/
 
         #Various column spans on tables
         a[:colspan] = $1 if attribute_text =~ /\\(\d+)/
         a[:rowspan] = $1 if attribute_text =~ /\/(\d+)/
 
         #Vertical alignments on tables
-        a[:style] &lt;&lt; &quot;vertical-align:top;&quot; if attribute_text =~ /\^/
-        a[:style] &lt;&lt; &quot;vertical-align:bottom;&quot; if attribute_text =~ /\~/
+        a[:style] &lt;&lt; "vertical-align:top;" if attribute_text =~ /\^/
+        a[:style] &lt;&lt; "vertical-align:bottom;" if attribute_text =~ /\~/
 
         # Get rid of any empty attributes before returning
-        a.delete_if { |k,v| !v || (v  &quot;&quot;) }
+        a.delete_if { |k,v| !v || (v  "") }
     end
 
     def parse_glyphs( word )
@@ -489,7 +489,7 @@ class TextileParser
     # Now some random helper methods for decoding
 
     def list_ordered?
-        @scanner.matched[0,1]  &#39;#&#39;
+        @scanner.matched[0,1]  '#'
     end
 
     def list_depth
@@ -497,10 +497,10 @@ class TextileParser
     end
 
     def htmlesc( str )
-        str.gsub!( &#39;&amp;&#39;, &#39;&amp;&#39; )
-        str.gsub!( &#39;&quot;&#39;, &#39;&quot;&#39; )
-        str.gsub!( &#39;&lt;&#39;, &#39;&lt;&#39;)
-        str.gsub!( &#39;&gt;&#39;, &#39;&gt;&#39;)
+        str.gsub!( '&amp;', '&amp;' )
+        str.gsub!( '"', '"' )
+        str.gsub!( '&lt;', '&lt;')
+        str.gsub!( '&gt;', '&gt;')
         str
     end
 
@@ -515,7 +515,7 @@ class TextileParser
     end
 
     def reset
-        @html, @scanner = &quot;&quot; , StringScanner.new( @text )
+        @html, @scanner = "" , StringScanner.new( @text )
         @aliases = {}
         @indent = 0
     end    

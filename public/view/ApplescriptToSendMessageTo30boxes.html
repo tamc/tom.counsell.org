@@ -12,16 +12,16 @@
   </header>
   <p>I find the ability to forward messages to <a href="http://www.30boxes.com">www.30boxes.com</a> and have them added to my calendar extremely useful.</p>
 <p>I created an applescript to slightly automate the process:</p>
-<pre><code>tell application &quot;Mail&quot; 
+<pre><code>tell application "Mail" 
     set theMessages to the selection
     repeat with thisMessage in theMessages
-        display dialog &quot;30 Boxes subject:&quot; default answer (thisMessage&#39;s subject as string)
+        display dialog "30 Boxes subject:" default answer (thisMessage's subject as string)
         set theSubject to text returned of result
         set newMessage to make new outgoing message
         tell newMessage
             set subject to theSubject
-            set content to thisMessage&#39;s content
-            make new to recipient with properties {address:&quot;add@30boxes.com&quot;}
+            set content to thisMessage's content
+            make new to recipient with properties {address:"add@30boxes.com"}
         end tell
         send newMessage
         delete newMessage

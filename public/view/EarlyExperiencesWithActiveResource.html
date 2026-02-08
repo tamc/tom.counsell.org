@@ -29,13 +29,13 @@
 <h2>Initialization</h2>
 <p>The example that DHH gave:</p>
 <pre><code>Person = ActiveResource::Struct.new do |person|
-  person.uri = &quot;http://api.myremote.com/people&quot; 
-  person.credentials :name =&gt; &quot;me&quot;, :password =&gt; &quot;password&quot; 
+  person.uri = "http://api.myremote.com/people" 
+  person.credentials :name =&gt; "me", :password =&gt; "password" 
 end
 </code></pre>
 <p>What works in the code:</p>
 <pre><code>Person = ActiveResource::Struct.create
-Person.site = &quot;http://api.myremote.com/people&quot;
+Person.site = "http://api.myremote.com/people"
 </code></pre>
 <h2>Get</h2>
 <p>You can then get an object:</p>
@@ -44,7 +44,7 @@ Person.site = &quot;http://api.myremote.com/people&quot;
 <p>There is an error if you try and <code>find(:all)</code> and no objects exists.</p>
 <h2>Put / Update</h2>
 <p>Saving doesn’t work, because ActiveResource doesn’t set the content-type. Adding this at the start of the request method in <a href="http://dev.rubyonrails.org/browser/trunk/activeresource/lib/active_resource/connection.rb#L60">ActiveResource::Connection</a> seems to help:</p>
-<pre><code>arguments &lt;&lt; { &#39;content-type&#39; =&gt; &#39;application/xml&#39; }
+<pre><code>arguments &lt;&lt; { 'content-type' =&gt; 'application/xml' }
 </code></pre>
 <h2>Post / Create</h2>
 <p>Creating a record doesn’t work, as <code>Person.save</code> currently goes straight to the put method.</p>
@@ -55,13 +55,13 @@ Person.site = &quot;http://api.myremote.com/people&quot;
 end
 </code></pre>
 <pre><code>def create
-  attributes[&quot;id&quot;] = connection.post(self.class.collection_path, to_xml)
+  attributes["id"] = connection.post(self.class.collection_path, to_xml)
 end
 </code></pre>
 <p><a href="http://dev.rubyonrails.org/browser/trunk/activeresource/lib/active_resource/connection.rb#L54">ActiveResource::Connection</a></p>
 <pre><code>def post(path, body)
   response = request(:post, path, body)
-  return response[&#39;Location&#39;][/\/([^\/]*?)$/,1] # The id
+  return response['Location'][/\/([^\/]*?)$/,1] # The id
 end
 </code></pre>
 

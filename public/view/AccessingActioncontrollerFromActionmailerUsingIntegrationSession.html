@@ -11,7 +11,7 @@
     <h1>Accessing ActionController from ActionMailer using Integration::Session</h1>
   </header>
   <p>Up until <a href="Rails.html">Rails</a> 1.1 there was no easy way to include output from ActionControllers in a mail message created with ActionMailer. Now you can use code like this in your mail view templates:</p>
-<p> <code>``` &lt;%   session = ActionController::Integration::Session.new %&gt;  &lt;%   session.host! &#39;www.mysite.com&#39; %&gt;  &lt;%  session.get session.url_for(:controller =&gt; &#39;view&#39;, :action =&gt; &#39;somthing&#39; ) %&gt;  &lt;%=   session.response.body %&gt; ```</code></p>
+<p> <code>``` &lt;%   session = ActionController::Integration::Session.new %&gt;  &lt;%   session.host! 'www.mysite.com' %&gt;  &lt;%  session.get session.url_for(:controller =&gt; 'view', :action =&gt; 'somthing' ) %&gt;  &lt;%=   session.response.body %&gt; ```</code></p>
 
 </body>
 </html>

@@ -13,23 +13,23 @@
   <p><a href="../index.html">Back to programming</a></p>
 <p>My boss, Steve, likes <a href="https://en.wikipedia.org/wiki/Steampunk">steampunk</a>. He also liked the display we used to have to monitor what was going on with our servers. So, for Christmas I decided to make him an old-fashioned dial display that shows the current load on our servers. It uses the local WiFi to connect to <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> to get the current value of the relevant <a href="https://aws.amazon.com/cloudwatch/">CloudWatch metric</a>, in our case requests/minute to our main servers.</p>
 <figure>
-  <a href='desk.jpg'><img src='desk-small.jpg' width='500'></a>
+  <a href="desk.jpg"><img src="desk-small.jpg" width="500"></a>
   <figcaption>The load meter on Steve's desk behind his lamp. Boxing day, so not much load.</figcaption>
 </figure>
 
 <figure>
-  <a href='front.jpg'><img src='front-small.jpg' width='500'></a>
+  <a href="front.jpg"><img src="front-small.jpg" width="500"></a>
   <figcaption>This is the meter, showing 3600 requests/minute to our main servers. <br>The black cable provides power. Data is over wifi.</figcaption>
 </figure>
 
 <p>The display is an unmodified 1mA ammeter built in 1949. I got it from <a href="http://www.electrojumble.org/Meters.htm">ElectroJumble</a>.</p>
 <figure>
-  <a href='back.jpg'><img src='back-small.jpg' width='500'></a>
+  <a href="back.jpg"><img src="back-small.jpg" width="500"></a>
   <figcaption>This is the wiring, showing a WEMOS D1 Mini wired to the ammeter inputs <br> in series with a variable resistor. The black cable is power. The gold looking <br>zig-zag is the aerial. The mess on the top of the left peg is masking tape.</figcaption>
 </figure>
 
 <p>The brains is an <a href="https://espressif.com/en/products/hardware/esp8266ex/overview">ESP-8266EX</a> in the form of a <a href="https://www.wemos.cc/product/d1-mini.html">WEMOS D1 Mini</a>.</p>
-<p>The wiring is simple, and doesn&#39;t require altering the ammeter:</p>
+<p>The wiring is simple, and doesn't require altering the ammeter:</p>
 <ol>
 <li>The WEMOS is powered using a USB cable (black cable from the bottom).</li>
 <li>The ground pin of the WEMOS is wired to the ground pin of the ammeter.</li>
@@ -41,13 +41,13 @@
 <li>Boots up</li>
 <li>Connects to the local wifi</li>
 <li>Makes a request to a url on our servers (see below) that returns a single value between 0 and 1000</li>
-<li>Sets PIN D0 to a voltage based on that value (this is done using the ESP-8266&#39;s ability to do <a href="https://en.wikipedia.org/wiki/Pulse-width_modulation">PWM</a>)</li>
+<li>Sets PIN D0 to a voltage based on that value (this is done using the ESP-8266's ability to do <a href="https://en.wikipedia.org/wiki/Pulse-width_modulation">PWM</a>)</li>
 <li>The voltage causes a current to flow through the variable resistor, which is then measured by the ammeter.</li>
 <li>The ESP-8266 then sleeps for a minute, before repeating the process.</li>
 </ol>
 <p>The API:</p>
 <ol>
-<li>Uses <a href="https://aws.amazon.com/api-gateway/">Amazon&#39;s API gateway</a>, which provides an https url.</li>
+<li>Uses <a href="https://aws.amazon.com/api-gateway/">Amazon's API gateway</a>, which provides an https url.</li>
 <li>When the ESP-8266 makes a GET request to that url, it is passed onto an AWS lambda function.</li>
 <li>The Lambda function gets the latest value of a CloudWatch metric,</li>
 <li>scales that value to be between 0 and 1000</li>
