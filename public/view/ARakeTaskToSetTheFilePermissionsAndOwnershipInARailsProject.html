@@ -10,7 +10,7 @@
   <header>
     <h1>A rake task to set the file permissions and ownership in a rails project</h1>
   </header>
-  <p><a href="Darcs.html">Darcs</a> doesn’t mange file permissions or ownership. To make it easy to setup file permissions after a <code>darcs get</code> of a <a href="Rails.html">rails</a> project I create a setup.rake file in lib/tasks with the following:</p>
+  <p><a href="/view/Darcs.html">Darcs</a> doesn't mange file permissions or ownership. To make it easy to setup file permissions after a <code>darcs get</code> of a <a href="/view/Rails.html">rails</a> project I create a setup.rake file in lib/tasks with the following:</p>
 <p>  <code>``` desc 'Set permissions on fast and cgi scripts'   task :set_permissions do     # Execute privelages     ['public','public/dispatch.cgi','public/dispatch.fcgi','public/dispatch.rb','script/*','script/process/*'].each do |file|       p `chmod a+x #{File.dirname(__FILE__) + '/../../' + file }`     end     # Write privelages     ['tmp','log','index','public/list','public/talk','public/user'].each do |file|       p `chmod -R a+rw #{File.dirname(__FILE__) + '/../../' + file }`     end ```</code></p>
 <p>After a <code>darcs get</code> I can then just run <code>rake set_permissions</code> and be ready to run.</p>
 

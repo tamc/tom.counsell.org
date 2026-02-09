@@ -24,20 +24,20 @@ Projects
 -   A web based event booking system ( [http://mcr.clare.cam.ac.uk/events/](http://mcr.clare.cam.ac.uk/events/)
     )
 -   A web based resource (e.g. rooms, boats) booking system
--   A wiki (that is hosting this) designed for [PhD](Phd.html) note taking ( [http://www.soks.org](http://www.soks.org) )
+-   A wiki (that is hosting this) designed for PhD note taking ( [http://www.soks.org](http://www.soks.org) )
 
 
 Random scripts & notes
 ----------------------
 
--   [Excel to Latex table convertor](ExcelToLatexTableConvertor.html) -- Thanks to Alan Munn ,this now exists [CTAN](http://www.ctan.org/pkg/csv2latex)
--   A [textile to html](TextileToHtml.html) convertor
--   [An acronym finder](AnAcronymFinder.html)
--   [A boring file for darcs and rails](ABoringFileForDarcsAndRails.html)
--   [A rake task to set the file permissions and ownership in a rails project](ARakeTaskToSetTheFilePermissionsAndOwnershipInARailsProject.html)
--   [Accessing ActionController from ActionMailer using Integration::Session](AccessingActioncontrollerFromActionmailerUsingIntegrationSession.html)
--   [Applescript to send message to 30boxes](ApplescriptToSendMessageTo30boxes.html)
--   [Early experiences with Active Resource](EarlyExperiencesWithActiveResource.html)
+-   Excel to Latex table convertor -- Thanks to Alan Munn ,this now exists [CTAN](http://www.ctan.org/pkg/csv2latex)
+-   A textile to html convertor
+-   An acronym finder
+-   A boring file for darcs and rails
+-   A rake task to set the file permissions and ownership in a rails project
+-   Accessing ActionController from ActionMailer using Integration::Session
+-   Applescript to send message to 30boxes
+-   Early experiences with Active Resource
 -   Helped with some fixes for a tool to [translate OmniOutliner notes into Latex](http://www.opendarwin.org/~landonf/software/Omni-LaTeX/).
 
 My history as a programmer
@@ -47,12 +47,12 @@ My mum taught me to program when I was aged 8 or so, in [BBC Basic](http://www.b
 
 During my university years I worked for a few start-ups doing some coding in Java including a web-server that customised content to the person viewing it in the days when that was pretty novel and high tech, and some work on electronic health records.
 
-I didn't do any programming while I was working as a [Strategy Consultant](http://www.marakon.com), but re-learnt when I went back to University for my [PhD](Phd.html) where I produced a bunch of handy web applications including <https://talks.cam.ac.uk> which, astoundingly to me, the University kept running without updates from 2007 to 2024.
+I didn't do any programming while I was working as a [Strategy Consultant](http://www.marakon.com), but re-learnt when I went back to University for my PhD where I produced a bunch of handy web applications including <https://talks.cam.ac.uk> which, astoundingly to me, the University kept running without updates from 2007 to 2024.
 
-I then worked in Strategy again, at the [Carbon Trust](https://www.carbontrust.com) before entering the [UK Civil Service](https://www.gov.uk/government/organisations/department-of-energy-climate-change). The Civil Service didn't permit any programming languages on their computers, just Excel. So during my commute I wrote some software that could convert Excel spreadsheets to C, so you could use them to back websites and do much more sophisticated analysis. I also wrote a lot of javascript tools, since they could be used by civil servants in their browsers. None of which was my job.
+I then worked in Strategy again, at the Carbon Trust before entering the [UK Civil Service](https://www.gov.uk/government/organisations/department-of-energy-climate-change). The Civil Service didn't permit any programming languages on their computers, just Excel. So during my commute I wrote some software that could convert Excel spreadsheets to C, so you could use them to back websites and do much more sophisticated analysis. I also wrote a lot of javascript tools, since they could be used by civil servants in their browsers. None of which was my job.
 
 My first child came along just as Apple relased the app store. So I wrote a little app to help my wife track her breastfeeding. It was the first of its kind on the app store, though there are many like it now.
 
-But then in 2015 I actually started working as a full-time, paid programmer. Writing code to power [Tapestry](https://tapestry.info) a web service for nurseries. It was a tiny firm when I started so I did everything - the site, the iOS and Android apps, the servers, the internal tools, everything. But I loved it.
+But then in 2015 I actually started working as a full-time, paid programmer. Writing code to power Tapestry a web service for nurseries. It was a tiny firm when I started so I did everything - the site, the iOS and Android apps, the servers, the internal tools, everything. But I loved it.
 
 I've remained a professional full-time programmer ever since. Right now at [GiveDirectly](https://www.givedirectly.org). I love making things that improve people's lives - and programming is a really easy way to do that.

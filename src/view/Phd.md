@@ -6,7 +6,7 @@ css:
 
 Back to the [home page](/)
 
-I’ve finished my PhD. It was supervised by [Julian Allwood](http://www.ifm.eng.cam.ac.uk/people/jma42):
+I’ve finished my PhD. It was supervised by Julian Allwood:
 
 ## Abstract
 
@@ -24,7 +24,7 @@ You can [download a pdf](https://files.counsell.org/tamc-thesis-v2.pdf) of this 
 
 ## PhD Publications
 
-Some of the material in my PhD thesis has been published in Journals and presented at conferences. In all cases my supervisor, [Julian Allwood](http://www.ifm.eng.cam.ac.uk/people/jma42), was co-author:
+Some of the material in my PhD thesis has been published in Journals and presented at conferences. In all cases my supervisor, Julian Allwood, was co-author:
 
 ### Journal papers
 

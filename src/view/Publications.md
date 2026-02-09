@@ -11,9 +11,9 @@ I’ve been involved in four Carbon Trust publications:
 3.  [Cutting Carbon in Europe: The 2020 plans and the future of the EU ETS](http://www.carbontrust.co.uk/publications/publicationdetail?productid=CTC734)
 4.  [EU ETS impacts on profitability and trade: a sector by sector analysis](http://www.carbontrust.co.uk/publications/publicationdetail.htm?productid=CTC728)
 
-# [PhD](Phd.html) Publications
+# PhD Publications
 
-Some of the material in my [PhD](Phd.html) thesis has been published in Journals and presented at conferences. In all cases my supervisor, [Julian Allwood](http://www.ifm.eng.cam.ac.uk/people/jma42), was co-author:
+Some of the material in my PhD thesis has been published in Journals and presented at conferences. In all cases my supervisor, Julian Allwood, was co-author:
 
 ## Journal papers
 

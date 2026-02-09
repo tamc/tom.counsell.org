@@ -30,7 +30,7 @@ It is GPL so feel free to edit and share.
 Open a terminal window. Change into this directory.
 
 1.  open test.pages
-2.  [ruby](Ruby.html) pages-bibtex.rb test.pages
+2.  ruby pages-bibtex.rb test.pages
 3.  open test-with-bibliography.pages
 
 ## Usage

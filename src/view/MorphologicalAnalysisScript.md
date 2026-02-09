@@ -4,7 +4,7 @@ css:
   - /index.css
 ---
 
-Zwicky proposed an approach to problem solving (described [in this pdf](http://www.swemorph.com/pdf/new-methods.pdf)) that is rather tedious to do by hand. The script below helps. It requires [ruby](Ruby.html) 1.8+. If you want to know more about Morphological Analysis, take a look at the Swedish Morphological Society’s site at [www.swemorph.com](http://www.swemorph.com)
+Zwicky proposed an approach to problem solving (described [in this pdf](http://www.swemorph.com/pdf/new-methods.pdf)) that is rather tedious to do by hand. The script below helps. It requires ruby 1.8+. If you want to know more about Morphological Analysis, take a look at the Swedish Morphological Society’s site at [www.swemorph.com](http://www.swemorph.com)
 
 ```
 #!/usr/bin/ruby

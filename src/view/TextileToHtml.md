@@ -4,7 +4,7 @@ css:
   - /index.css
 ---
 
-Textile is a markup language that is meant to make it quick and easy to write basic web pages for wikis, blogs and other uses. Redcloth is a [ruby](Ruby.html) class that converts textile to html, written by \_why. Details are at [http://www.whytheluckystiff.net/ruby/redcloth/](http://www.whytheluckystiff.net/ruby/redcloth/) . Unfortunately, due to my own failings, I find it hard to understand \_why’s code, so I wrote a partial reimplementation bellow. This has the benefit of (for me) being clearer and easier to extend. The drawback is that it doesn’t do all that \_why’s version does and is slower. But it is here in case anyone finds it useful.
+Textile is a markup language that is meant to make it quick and easy to write basic web pages for wikis, blogs and other uses. Redcloth is a ruby class that converts textile to html, written by \_why. Details are at [http://www.whytheluckystiff.net/ruby/redcloth/](http://www.whytheluckystiff.net/ruby/redcloth/) . Unfortunately, due to my own failings, I find it hard to understand \_why’s code, so I wrote a partial reimplementation bellow. This has the benefit of (for me) being clearer and easier to extend. The drawback is that it doesn’t do all that \_why’s version does and is slower. But it is here in case anyone finds it useful.
 
 ```
 require 'strscan'

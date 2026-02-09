@@ -14,7 +14,7 @@ Below are my (in progress) notes on getting it to work.
 
 ## Pre-requisites
 
-You need edge [rails](Rails.html): `rake rails:freeze:edge`
+You need edge rails: `rake rails:freeze:edge`
 
 You need some rest-ful type routes. I’ve used: `script/plugin install simply_restful`
 

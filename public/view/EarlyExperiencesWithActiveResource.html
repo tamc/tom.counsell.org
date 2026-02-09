@@ -15,7 +15,7 @@
 <p>Unfortunately the early version he checked into the <a href="http://dev.rubyonrails.org/browser/trunk/activeresource">rails edge repository</a> doesn’t quite match his slides.</p>
 <p>Below are my (in progress) notes on getting it to work.</p>
 <h2>Pre-requisites</h2>
-<p>You need edge <a href="Rails.html">rails</a>: <code>rake rails:freeze:edge</code></p>
+<p>You need edge <a href="/view/Rails.html">rails</a>: <code>rake rails:freeze:edge</code></p>
 <p>You need some rest-ful type routes. I’ve used: <code>script/plugin install simply_restful</code></p>
 <p>You need a controller that has the same name as your model (e.g. PeopleController) with index, new, create, show, edit, update and delete methods. Each of these needs to respond sensibly to xml requests, e.g.:</p>
 <pre><code>def show
